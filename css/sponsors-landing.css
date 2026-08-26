@@ -320,20 +320,6 @@ body{background-color:var(--paper)}
     filter:drop-shadow(0 14px 26px rgba(20,30,51,.16))}
 }
 
-/* ---- Roadmap: camiseta "la 10" pegada al borde derecho ---- */
-.sec--roadmap{position:relative; overflow:hidden}
-.sec--roadmap > .wrap{position:relative; z-index:1}
-@media(min-width:1280px){
-  .sec--roadmap::before{
-    content:''; position:absolute; right:0; bottom:0; z-index:0; pointer-events:none;
-    width:min(330px, calc((100vw - 1160px) / 2 + 60px));
-    height:min(78%, 560px);
-    background:url('../images/img-sponsors/la10.png') right bottom / contain no-repeat;
-    mix-blend-mode:multiply;
-    -webkit-mask-image:linear-gradient(270deg, #000 60%, transparent 100%);
-    mask-image:linear-gradient(270deg, #000 60%, transparent 100%)}
-}
-
 /* ---- Stack de acciones: arte que llena el hueco de la tarjeta Post-feria ---- */
 .fase{position:relative; overflow:visible}
 .fase-art{display:block; height:auto; max-width:none;

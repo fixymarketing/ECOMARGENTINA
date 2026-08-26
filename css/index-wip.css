@@ -673,7 +673,10 @@
 
 .section-anchor { scroll-margin-top: var(--header-h); }
 .market-contact {
-  padding: 96px 0 110px;
+  padding: clamp(110px, 12vw, 168px) 0 clamp(120px, 13vw, 180px);
+  min-height: min(88vh, 780px);
+  display: flex;
+  align-items: center;
   background: #051548;
   position: relative;
   overflow: hidden;
@@ -692,13 +695,14 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(5,21,72,.80) 0%, rgba(5,21,72,.88) 100%);
 }
-.market-contact > .container { position: relative; z-index: 1; }
+.market-contact > .container { position: relative; z-index: 1; width: 100%; }
 @media (prefers-reduced-motion: reduce) { .market-contact__video { display: none; } }
 .market-contact__eyebrow { margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
 .market-contact__title { margin: 0; color: #fff; font-size: clamp(38px, 5vw, 64px); line-height: 1; }
 .market-contact__text { max-width: 690px; margin: 20px auto 30px; font-size: 19px; line-height: 1.45; color: rgba(255,255,255,.84); }
 
-.footer__brand { color: var(--c-black); font-family: var(--font); font-size: 24px; font-weight: 800; }
+.footer__brand { display: block; line-height: 0; }
+.footer__brand img { display: block; width: clamp(180px, 22vw, 250px); height: auto; }
 .footer__links { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; gap: 10px 18px; }
 .footer__links a { color: rgba(0,0,0,.68); font-size: 13px; text-decoration: none; }
 .footer__links a:hover { color: var(--c-black); }
@@ -722,7 +726,7 @@
   .ecosystem__more { display: inline-flex; }
   .latam-mission__text { font-size: 15px; }
   .latam-mission__event strong { font-size: 18px; }
-  .market-contact { padding: 64px 0 90px; }
+  .market-contact { padding: 80px 0 96px; min-height: auto; }
   .market-contact__text { font-size: 16px; }
   .footer__links { justify-content: flex-start; }
 }

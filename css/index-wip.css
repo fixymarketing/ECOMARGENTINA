@@ -675,11 +675,25 @@
 .market-contact {
   padding: 96px 0 110px;
   background: #051548;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   color: #fff;
   text-align: center;
   scroll-margin-top: var(--header-h);
 }
 .market-contact .btn--yellow { background: #5797d4; color: #fff; }
+/* video de fondo */
+.market-contact__media { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.market-contact__video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.market-contact__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5,21,72,.80) 0%, rgba(5,21,72,.88) 100%);
+}
+.market-contact > .container { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .market-contact__video { display: none; } }
 .market-contact__eyebrow { margin: 0 0 16px; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
 .market-contact__title { margin: 0; color: #fff; font-size: clamp(38px, 5vw, 64px); line-height: 1; }
 .market-contact__text { max-width: 690px; margin: 20px auto 30px; font-size: 19px; line-height: 1.45; color: rgba(255,255,255,.84); }

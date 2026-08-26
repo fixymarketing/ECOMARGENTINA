@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1175">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: url(#Degradado_sin_nombre_3);
+        stroke-miterlimit: 10;
+        stroke-width: 3.9px;
+      }
+
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_2);
+        fill-opacity: .8;
+      }
+
+      .st3 {
+        fill: url(#Degradado_sin_nombre);
+      }
+
+      .st4 {
+        clip-path: url(#clippath);
+      }
+
+      .st5 {
+        fill: url(#Degradado_sin_nombre_4);
+        isolation: isolate;
+        opacity: 0;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st1" x="-30" width="1970" height="1298"/>
+    </clipPath>
+    <linearGradient id="Degradado_sin_nombre" data-name="Degradado sin nombre" x1="1093.9" y1="933.5" x2="705.9" y2="-202.2" gradientTransform="translate(0 1176) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="1" stop-color="#2b2930"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="958" y1="-556" x2="958" y2="1455" gradientTransform="translate(0 1176) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#0567ee" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0567ee"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="2331.3" y1="1474" x2="410.2" y2="1474" gradientTransform="translate(0 1176) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe600"/>
+      <stop offset=".5" stop-color="#ffe600" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#ffe600"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_4" data-name="Degradado sin nombre 4" x1="388.5" y1="1265.9" x2="2177.5" y2="3126.2" gradientTransform="translate(0 1176) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddf4fa"/>
+      <stop offset=".1" stop-color="#b2d8f7"/>
+      <stop offset=".3" stop-color="#7eb6f4"/>
+      <stop offset=".5" stop-color="#5299f2"/>
+      <stop offset=".6" stop-color="#3083f0"/>
+      <stop offset=".8" stop-color="#1873ef"/>
+      <stop offset=".9" stop-color="#0a6aee"/>
+      <stop offset="1" stop-color="#0567ee"/>
+    </linearGradient>
+  </defs>
+  <g class="st4">
+    <g>
+      <path class="st3" d="M1930,0H-20v1298h1950V0Z"/>
+      <path class="st2" d="M1681.5,843.8l-.3,228.6v595.6c0,175.5-141.5,318.4-315.3,318.4h-815.8c-214,0-388.2,175.2-389.3,391,0,.8,0,1.5,0,2.2v824c0,175.6-141.5,318.4-315.3,318.4h-816.2c-173.9,0-315.3-142.8-315.3-318.4v-824c0-175.5,141.5-318.4,315.3-318.4H-154.3c214.4-.4,388.6-176.6,388.6-393.1h0v-824.2c0-175.6,141.5-318.4,315.3-318.4h606.4c0,0,209.7,0,209.7,0,214.7,0,389.3-176.3,389.3-393.1v-824.2c0-175.6,141.5-318.4,315.3-318.4h816.2c173.9,0,315.3,142.8,315.3,318.4V132.4c0,175.6-141.5,318.4-315.3,318.4h-815.8c-214.7,0-389.3,176.3-389.3,393.1h0Z"/>
+      <path class="st0" d="M1681.5-710.2l-.3,228.6V114c0,175.6-141.5,318.4-315.3,318.4h-815.8c-214,0-388.2,175.2-389.3,391,0,.8,0,1.5,0,2.2v824c0,175.6-141.5,318.4-315.3,318.4h-816.2c-173.9,0-315.3-142.8-315.3-318.4v-824c0-175.6,141.5-318.4,315.3-318.4H-154.3c214.4-.4,388.6-176.6,388.6-393.1h0v-824.2c0-175.6,141.5-318.4,315.3-318.4h606.4c0,0,209.7,0,209.7,0,214.7,0,389.3-176.3,389.3-393.1v-824.2c0-175.6,141.5-318.4,315.3-318.4h816.2c173.9,0,315.3,142.8,315.3,318.4v824c0,175.6-141.5,318.4-315.3,318.4h-815.8c-214.7,0-389.3,176.3-389.3,393.1h0Z"/>
+      <path class="st5" d="M1271.8-795c.6,0,1.1,0,1.7,0h532.7c113.5,0,205.8-92.4,205.8-206v-533.1c0-113.6-92.3-206-205.8-206h-532.7c-113.5,0-205.8,92.4-205.8,206v533.1c0,.9,0,1.8,0,2.7-1.6,138.8-115,251.3-254.1,251.3H280.8c-113.5,0-205.8,92.4-205.8,206V-8c0,113.6,92.3,206,205.8,206h532.7c113.5,0,205.8-92.4,205.8-206v-532.8c0-139.6,113.1-253.3,252.4-254.3h0Z"/>
+    </g>
+  </g>
+</svg>

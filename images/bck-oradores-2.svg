@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1475.2">
+  <!-- Generator: Adobe Illustrator 30.4.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 226)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_2);
+      }
+
+      .st3 {
+        fill: url(#Degradado_sin_nombre);
+      }
+
+      .st1 {
+        stroke: url(#Degradado_sin_nombre_3);
+        stroke-miterlimit: 10;
+        stroke-width: 3.9px;
+      }
+
+      .st4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="-30" width="1980" height="1578"/>
+    </clipPath>
+    <linearGradient id="Degradado_sin_nombre" data-name="Degradado sin nombre" x1="1245.7" y1="384.6" x2="316.9" y2="1335.6" gradientTransform="translate(0 100)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2b2930"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="-60.1" y1="1019.6" x2="1784.2" y2="-899.2" gradientTransform="translate(0 100)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddf4fa"/>
+      <stop offset="0" stop-color="#b2d8f7"/>
+      <stop offset=".3" stop-color="#7eb6f4"/>
+      <stop offset=".5" stop-color="#5299f2"/>
+      <stop offset=".6" stop-color="#3083f0"/>
+      <stop offset=".8" stop-color="#1873ef"/>
+      <stop offset=".9" stop-color="#0a6aee"/>
+      <stop offset="1" stop-color="#0567ee"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="1283.5" y1="377" x2="1283.5" y2="1248.5" gradientTransform="translate(0 100)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe600"/>
+      <stop offset=".4" stop-color="#ffe600" stop-opacity=".2"/>
+      <stop offset=".8" stop-color="#ffe600" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  <g class="st4">
+    <g>
+      <path class="st3" d="M1950,0H-20v1544h1970V0Z"/>
+      <path class="st2" d="M433.3,739.1h100.8c0,0,262.6,0,262.6,0,77.4,0,140.4-63,140.4-140.4v-211.7h0v-151.4c0-95.3,77.2-172.8,172.4-173.3h364.3c77.4,0,140.4-63,140.4-140.4v-363.3c0-77.4-63-140.4-140.4-140.4h-363.3c-77.4,0-140.4,63-140.4,140.4V-78.3h0c-.2,95.5-77.8,173.1-173.3,173.1h-363.3c-77.4,0-140.4,63-140.4,140.4v270h0v93.4c0,95.6-77.7,173.3-173.3,173.3H-243.6c-77.4,0-140.4,63-140.4,140.4v363.3c0,77.4,63,140.4,140.4,140.4H119.6c77.4,0,140.4-63,140.4-140.4v-363.2c0-95.6,77.7-173.3,173.3-173.3h0Z"/>
+      <path class="st1" d="M1098.2,1428.2l102.8-.2h267.7c78.9,0,143.1-64.2,143.1-143.1v-215.8h0v-154.3c0-97.1,78.7-176.1,175.7-176.6h371.4c78.9,0,143.1-64.2,143.1-143.1V225.1c0-78.9-64.2-143.1-143.1-143.1h-370.4c-78.9,0-143.1,64.2-143.1,143.1v370.3h0c-.2,97.3-79.4,176.4-176.7,176.4h-370.4c-78.9,0-143.1,64.2-143.1,143.1v275.1h0v95.1c0,97.4-79.3,176.6-176.7,176.6h-370.4c-78.9,0-143.1,64.2-143.1,143.1v370.2c0,78.9,64.2,143.1,143.1,143.1h370.4c78.9,0,143.1-64.2,143.1-143.1v-370.1c0-97.4,79.3-176.6,176.7-176.6h0Z"/>
+    </g>
+  </g>
+</svg>

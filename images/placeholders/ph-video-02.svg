@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Video provisorio">
+  <defs>
+    <pattern id="pv02" width="56" height="56" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="56" height="56" fill="#051548"/>
+      <rect width="28" height="56" fill="#0a1f5c"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#pv02)"/>
+  <rect x="24" y="24" width="1232" height="672" fill="none" stroke="#5797d4" stroke-width="4" stroke-dasharray="18 14" rx="18"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="640" y="330" fill="#5797d4" font-size="42" font-weight="700" letter-spacing="12">VIDEO SPONSOR 2</text>
+    <text x="640" y="418" fill="#ffffff" font-size="58" font-weight="800" letter-spacing="4">PRÓXIMAMENTE</text>
+  </g>
+</svg>

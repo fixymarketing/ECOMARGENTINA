@@ -1,0 +1,18 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Respaldos y temporales
+*.bak
+*.bak2
+*.tmp
+_tmp_*
+~$*
+
+# Dependencias
+node_modules/

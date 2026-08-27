@@ -71,3 +71,21 @@
 .mapa-stand__card--alt .mapa-stand__list li b{color:#fff}
 .mapa-stand__card .btn{margin-top:4px}
 .header__nav a.is-current{background:rgba(255,255,255,.16)}
+
+/* referencias */
+.mapa-legend{
+  display:flex; flex-wrap:wrap; gap:8px 18px; margin:0 0 16px; padding:0; list-style:none;
+}
+.mapa-legend li{
+  display:flex; align-items:center; gap:8px;
+  font-family:var(--font); font-size:12.5px; color:rgba(255,255,255,.78);
+}
+.mapa-legend li b{color:#fff; font-weight:800}
+.mapa-legend__sw{
+  width:20px; height:13px; border-radius:3px; flex:0 0 auto;
+  border:1px solid rgba(255,255,255,.5);
+}
+.mapa-legend__sw--ar{
+  background:linear-gradient(180deg,#74acdf 0 33%,#fff 33% 66%,#74acdf 66% 100%);
+  border-color:#9dc0f0;
+}

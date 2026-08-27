@@ -5,7 +5,7 @@
   var g = document.getElementById('mapa-zoomable');
   if (!vp || !svg || !g) return;
 
-  var VB = { w: 6124, h: 2700 };
+  var VB = { w: 2449, h: 1080 };
   var state = { scale: 1, x: 0, y: 0 };
   var MIN = 1, MAX = 7;
   var label = document.getElementById('mapa-zoom-label');

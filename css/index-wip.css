@@ -670,6 +670,9 @@
 .latam-mission__event { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; color: var(--c-black); }
 .latam-mission__event strong { font-family: var(--font); font-size: 16px; line-height: 1.25; letter-spacing: .01em; }
 .latam-mission__event span { font-family: var(--font); font-size: 15px; color: rgba(0,0,0,.58); }
+/* boton de la seccion en blanco */
+.latam-mission__event .btn--blue { background: #fff; color: #051548; border-color: #fff; }
+.latam-mission__event .btn--blue:hover { background: #051548; color: #fff; border-color: #051548; }
 
 .section-anchor { scroll-margin-top: var(--header-h); }
 .market-contact {

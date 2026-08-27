@@ -16,3 +16,6 @@ _tmp_*
 
 # Dependencias
 node_modules/
+
+# Fuentes de video sin comprimir (se versiona solo la version -web)
+media/negocios-effix.mp4

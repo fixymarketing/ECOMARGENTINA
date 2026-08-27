@@ -33,7 +33,7 @@
     </clipPath>
     <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="596.52" y1="1742.67" x2="41.92" y2="1320.77" gradientTransform="translate(0 2176) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5797d4"/>
-      <stop offset="1" stop-color="#f5f3ed"/>
+      <stop offset="1" stop-color="#5797d4"/>
     </linearGradient>
   </defs>
   <path class="cls-4" d="M2146.6,60.3h-363.4c-95.6.1-173.3,77.9-173.3,173.5v363.2c0,77.4-63,140.4-140.4,140.4h-363.3c-77.4,0-140.4-63-140.4-140.4V233.6c0-77.4,63-140.4,140.4-140.4h363.3c70.6,0,131.5-42.5,158.5-103.2H-679v2562.1h3033.4V-10h-86.2c-24.3,42-69.7,70.3-121.6,70.3h0Z"/>

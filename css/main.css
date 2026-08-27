@@ -2132,7 +2132,7 @@ body.effix-benefit-open { overflow: hidden; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 32px 30px 4px;
+  padding: 30px 48px 6px;
   text-align: center;
 }
 
@@ -2142,7 +2142,7 @@ body.effix-benefit-open { overflow: hidden; }
 .effix-benefit-card__description { font-family: var(--font); }
 
 .effix-benefit-card__eyebrow {
-  font-size: 15px;
+  font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.11em;
   line-height: 1;
@@ -2152,11 +2152,11 @@ body.effix-benefit-open { overflow: hidden; }
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin: 2px 0 -8px;
+  margin: 4px 0 -4px;
   font-family: var(--font);
-  font-size: 100px;
+  font-size: 74px;
   font-weight: 800;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
   line-height: 0.92;
   color: #5797d4;
   text-shadow: 0 3px 0 rgba(255, 255, 255, 0.35);
@@ -2169,7 +2169,7 @@ body.effix-benefit-open { overflow: hidden; }
 }
 
 .effix-benefit-card__off {
-  font-size: 27px;
+  font-size: 22px;
   font-weight: 900;
   letter-spacing: 0.18em;
   line-height: 1;
@@ -2177,16 +2177,16 @@ body.effix-benefit-open { overflow: hidden; }
 
 .effix-benefit-card__ticket {
   margin-top: 6px;
-  font-size: 17px;
+  font-size: 13.5px;
   font-weight: 800;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.02em;
   line-height: 1.05;
 }
 
 .effix-benefit-card__description {
-  max-width: 260px;
-  margin-top: 7px;
-  font-size: 13px;
+  max-width: 208px;
+  margin-top: 8px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -2232,7 +2232,8 @@ body.effix-benefit-open { overflow: hidden; }
 @media (max-width: 480px) {
   .effix-benefit-modal { padding: 16px; }
   .effix-benefit-card { width: min(330px, calc(100vw - 24px)); }
-  .effix-benefit-card__top { padding-inline: 26px; }
+  .effix-benefit-card__top { padding-inline: 44px; }
+  .effix-benefit-card__discount { font-size: 68px; }
 }
 
 @media (max-height: 560px) {
@@ -3367,12 +3368,12 @@ body.effix-benefit-open { overflow: hidden; }
   }
 
   .footer                     { padding-top: 0; }
-  .footer__inner              { flex-direction: column; gap: 24px; }
+  .footer__inner              { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
   .footer__links              { gap: 4px 0; }
   .footer__links a            { padding-inline: 12px; border-right: none; font-size: 14px; }
   .footer__links a:first-child { padding-left: 0; }
   .footer__copy               { margin-top: 8px; line-height: 1.5; }
-  .footer__right              { align-items: flex-start; }
+  .footer__right              { align-items: center; justify-content: center; }
   .footer__logo-img--desktop  { display: none; }
   .footer__logo-img--mobile   { display: block; width: 260px; height: auto; }
 

@@ -652,7 +652,7 @@
 
 .latam-mission__eyebrow {
   margin: 0 0 16px;
-  color: var(--c-blue);
+  color: #fff;
   font-family: var(--font);
   font-size: 13px;
   font-weight: 800;
@@ -728,7 +728,12 @@
   .latam-mission__event strong { font-size: 14px; }
   .market-contact { padding: 80px 0 96px; min-height: auto; }
   .market-contact__text { font-size: 16px; }
-  .footer__links { justify-content: flex-start; }
+  .footer__inner { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .footer__left { flex: 0 0 auto; align-items: center; }
+  .footer__brand img { width: clamp(170px, 52vw, 220px); }
+  .footer__right, .footer__links { justify-content: center; align-items: center; }
+  .footer__links { flex-wrap: wrap; gap: 8px 14px; }
+  .footer__links a { padding-inline: 0; font-size: 13px; }
 }
 
 /* ── ¿Por qué Argentina?: paleta oscura (fondo navy, cards celestes, texto blanco) ── */

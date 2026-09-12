@@ -49,14 +49,14 @@
 // Home — Ecosystem verticals + image lightbox
 (function () {
   var VERTICALS = [
-    { number: '01', title: 'EMPRESA', description: 'Estructura societaria y operación local.', image: 'placeholders/ph-eco-01.svg' },
-    { number: '02', title: 'IMPORTACIÓN', description: 'Ingreso de producto y operación internacional.', image: 'placeholders/ph-eco-02.svg' },
-    { number: '03', title: 'PAGOS', description: 'Cobros y medios de pago locales.', image: 'placeholders/ph-eco-03.svg' },
-    { number: '04', title: 'E-COMMERCE', description: 'Marketplaces, tienda e integraciones.', image: 'placeholders/ph-eco-04.svg' },
-    { number: '05', title: 'MARKETING', description: 'Demanda, adquisición y comunicación local.', image: 'placeholders/ph-eco-05.svg' },
-    { number: '06', title: 'LOGÍSTICA', description: 'Fulfillment, distribución y última milla.', image: 'placeholders/ph-eco-06.svg' },
-    { number: '07', title: 'OPERACIÓN', description: 'Atención, cambios, devoluciones y postventa.', image: 'placeholders/ph-eco-07.svg' },
-    { number: '08', title: 'ESCALA', description: 'Datos, automatización y crecimiento.', image: 'placeholders/ph-eco-08.svg' }
+    { number: '01', title: 'EMPRESA', description: 'Estructura societaria y operación local.', image: 'roadmap/R1.webp', imageFull: 'roadmap/R1-full.webp' },
+    { number: '02', title: 'IMPORTACIÓN', description: 'Ingreso de producto y operación internacional.', image: 'roadmap/R2.webp', imageFull: 'roadmap/R2-full.webp' },
+    { number: '03', title: 'PAGOS', description: 'Cobros y medios de pago locales.', image: 'roadmap/R3.webp', imageFull: 'roadmap/R3-full.webp' },
+    { number: '04', title: 'E-COMMERCE', description: 'Marketplaces, tienda e integraciones.', image: 'roadmap/R4.webp', imageFull: 'roadmap/R4-full.webp' },
+    { number: '05', title: 'MARKETING', description: 'Demanda, adquisición y comunicación local.', image: 'roadmap/R5.webp', imageFull: 'roadmap/R5-full.webp' },
+    { number: '06', title: 'LOGÍSTICA', description: 'Fulfillment, distribución y última milla.', image: 'roadmap/R6.webp', imageFull: 'roadmap/R6-full.webp' },
+    { number: '07', title: 'OPERACIÓN', description: 'Atención, cambios, devoluciones y postventa.', image: 'roadmap/R7.webp', imageFull: 'roadmap/R7-full.webp' },
+    { number: '08', title: 'ESCALA', description: 'Datos, automatización y crecimiento.', image: 'roadmap/R8.webp', imageFull: 'roadmap/R8-full.webp' }
   ];
   var IMAGE_BASE = 'images/';
   var grid = document.getElementById('ecosystem-grid');
@@ -73,6 +73,9 @@
     image.src = IMAGE_BASE + vertical.image;
     image.alt = '';
     image.loading = 'lazy';
+    image.decoding = 'async';
+    image.width = 760;
+    image.height = 428;
 
     var content = document.createElement('span');
     content.className = 'ecosystem__item-content';
@@ -94,7 +97,7 @@
 
   function openLightbox(index) {
     currentIndex = index;
-    lightboxImage.src = IMAGE_BASE + VERTICALS[currentIndex].image;
+    lightboxImage.src = IMAGE_BASE + (VERTICALS[currentIndex].imageFull || VERTICALS[currentIndex].image);
     lightboxImage.alt = VERTICALS[currentIndex].title;
     lightbox.hidden = false;
     document.body.style.overflow = 'hidden';

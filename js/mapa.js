@@ -5,9 +5,9 @@
   var g = document.getElementById('mapa-zoomable');
   if (!vp || !svg || !g) return;
 
-  var VB = { w: 2449, h: 1080 };
+  var VB = { w: 2449, h: 1405 };
   var state = { scale: 1, x: 0, y: 0 };
-  var MIN = 1, MAX = 7;
+  var MIN = 1, MAX = 8;
   var label = document.getElementById('mapa-zoom-label');
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
@@ -52,7 +52,7 @@
     var el = document.getElementById('stand-ar');
     if (!el) return;
     var b = el.getBBox();
-    var s = 3.4;
+    var s = 6;
     state.scale = s;
     state.x = VB.w / 2 - (b.x + b.width / 2) * s;
     state.y = VB.h / 2 - (b.y + b.height / 2) * s;

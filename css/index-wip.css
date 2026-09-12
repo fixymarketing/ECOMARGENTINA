@@ -17,7 +17,7 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('../images/hero-paper-texture.png');
+  background-image: url('../images/hero-paper-texture.webp');
   background-position: 0 0;
   background-repeat: repeat;
   background-size: 300px auto;
@@ -772,7 +772,7 @@
     left: max(-110px, calc(50% - 723px));
     height: 285px;
     aspect-ratio: 1024 / 1536;
-    background: url('../images/huella-arg.png') no-repeat center / contain;
+    background: url('../images/huella-arg.webp') no-repeat center / contain;
     opacity: .6;
   }
   .argentina-market > .container { position: relative; z-index: 1; }

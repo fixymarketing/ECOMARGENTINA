@@ -46,8 +46,8 @@
 #mapa-zoomable{transition:transform .35s cubic-bezier(.22,1,.36,1)}
 #mapa-zoomable.no-anim{transition:none}
 #mapa-svg text{font-family:var(--font), Arial, sans-serif}
-#stand-ar{animation:mapa-pulse 2.4s ease-in-out infinite}
-@keyframes mapa-pulse{0%,100%{opacity:1}50%{opacity:.78}}
+#stand-ar{animation:mapa-pulse 2.4s ease-in-out infinite; transform-origin:507px 1185px}
+@keyframes mapa-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.72;transform:scale(1.06)}}
 @media (prefers-reduced-motion: reduce){
   #stand-ar{animation:none}
   #mapa-zoomable{transition:none}

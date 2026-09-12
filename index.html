@@ -39,7 +39,7 @@
       <a href="#ecosistema">Ecosistema</a>
       <a href="#effix">EFFIX 2026</a>
       <a href="#faq">FAQ</a>
-      <a href="mapa.html">Mapa</a>
+      <a href="pages/mapa.html">Mapa</a>
     </nav>
 
     <div class="header__actions">
@@ -91,7 +91,7 @@
       <img src="images/Icon_faq.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
       <span>FAQ</span>
     </a>
-    <a href="mapa.html" class="mobile-menu__item">
+    <a href="pages/mapa.html" class="mobile-menu__item">
       <img src="images/Icon_mapa.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
       <span>Mapa de la feria</span>
     </a>
@@ -194,8 +194,8 @@
      ARGENTINA MARKET VISUAL
      ==================================================== -->
 <section class="market-visual argentina-market-visual" aria-label="ECOM ARGENTINA, puerta de entrada al mercado">
-  <video class="market-visual__video" autoplay="" muted="" loop="" playsinline="" preload="metadata" aria-hidden="true">
-    <source src="media/puerta-argentina.mp4" type="video/mp4">
+  <video class="market-visual__video" autoplay="" muted="" loop="" playsinline="" preload="none" data-lazy poster="images/poster-puerta-argentina.webp" aria-hidden="true">
+    <source data-src="media/puerta-argentina.mp4" type="video/mp4">
   </video>
   <div class="market-visual__container">
     <div class="market-visual-card">
@@ -417,8 +417,8 @@
 
   <!-- GIF de fondo (igual que hero__media) -->
   <div class="otras__media" aria-hidden="true">
-    <video id="effix-video" class="otras__gif" muted="" playsinline="" preload="auto" loop="">
-      <source src="media/negocios-effix-web.mp4" type="video/mp4">
+    <video id="effix-video" class="otras__gif" muted="" playsinline="" preload="none" data-lazy poster="images/poster-negocios-effix.webp" loop="">
+      <source data-src="media/negocios-effix-web.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -434,7 +434,8 @@
         <div class="latam-mission__event">
           <strong>ARGENTINA E-COMMERCE HUB<br>EFFIX 2026 · MEDELLÍN</strong>
           <span>16, 17 y 18 de octubre de 2026</span>
-          <a href="sponsors.html" class="btn btn--blue">Conocé la misión →</a>
+          <!-- Acceso a sponsors quitado a proposito: la landing se comparte solo por link privado.
+               Aca va a ir el telefono de contacto. -->
         </div>
       </div>
     </div>
@@ -501,8 +502,8 @@
 
 <section class="market-contact" id="contacto">
   <div class="market-contact__media" aria-hidden="true">
-    <video class="market-contact__video" autoplay muted loop playsinline preload="metadata">
-      <source src="media/prox-mercado.mp4" type="video/mp4">
+    <video class="market-contact__video" autoplay muted loop playsinline preload="none" data-lazy poster="images/poster-prox-mercado.webp">
+      <source data-src="media/prox-mercado.mp4" type="video/mp4">
     </video>
   </div>
   <div class="container">
@@ -531,7 +532,7 @@
         <a href="#ecosistema">Ecosistema</a>
         <a href="#effix">EFFIX 2026</a>
         <a href="#faq">FAQ</a>
-        <a href="mapa.html">Mapa</a>
+        <a href="pages/mapa.html">Mapa</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -616,6 +617,7 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/video-lazy.js"></script>
 <script src="js/effix-video.js"></script>
 <script src="js/index-wip.js"></script>
 <script src="js/effix-benefit-modal.js"></script>

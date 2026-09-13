@@ -223,10 +223,7 @@ body {
 
 /* Top: yellow section with SVG background */
 .mobile-menu__top {
-  background-color: var(--c-yellow);
-  background-image: url('../images/bck-menu-mobile-top.svg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-color: #74ACDF;
   padding: 20px 24px 28px;
   display: flex;
   flex-direction: column;

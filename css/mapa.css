@@ -32,6 +32,43 @@
 .mapa-btn--wide{font-size:14px}
 .mapa-btn--primary{background:#5797d4; border-color:#5797d4; font-size:14.5px}
 .mapa-btn--primary:hover{background:#fff; color:#051548}
+
+/* CTA "Ir a nuestro stand" — pin animado con la bandera argentina */
+.mapa-goto{
+  display:inline-flex; align-items:center; gap:12px;
+  min-width:290px; min-height:56px; padding:0 24px 0 18px;
+  justify-content:center; text-align:left; line-height:1.15;
+  box-shadow:0 14px 30px -14px rgba(87,151,212,.9);
+}
+.mapa-goto__label{font-size:15px; font-weight:700}
+.mapa-goto__label b{display:block; font-size:12.5px; font-weight:800; letter-spacing:.06em; opacity:.85}
+.mapa-goto__arrow{font-size:17px; font-weight:800; transition:transform .18s ease}
+.mapa-goto:hover .mapa-goto__arrow{transform:translateX(3px)}
+.mapa-goto__pin{position:relative; display:flex; align-items:center; justify-content:center; flex:0 0 auto}
+.mapa-goto__pin svg{display:block; animation:mapa-goto-bounce 1.8s ease-in-out infinite; transform-origin:50% 100%}
+.mapa-goto__pin::after{
+  content:""; position:absolute; bottom:-2px; left:50%; width:18px; height:6px;
+  transform:translateX(-50%); border-radius:50%;
+  background:rgba(5,21,72,.35); animation:mapa-goto-shadow 1.8s ease-in-out infinite;
+}
+@keyframes mapa-goto-bounce{
+  0%,100%{transform:translateY(0)}
+  30%{transform:translateY(-5px)}
+  55%{transform:translateY(0)}
+  70%{transform:translateY(-2px)}
+  85%{transform:translateY(0)}
+}
+@keyframes mapa-goto-shadow{
+  0%,100%{transform:translateX(-50%) scale(1); opacity:.35}
+  30%{transform:translateX(-50%) scale(.7); opacity:.18}
+  55%{transform:translateX(-50%) scale(1); opacity:.35}
+}
+@media (prefers-reduced-motion:reduce){
+  .mapa-goto__pin svg,.mapa-goto__pin::after{animation:none}
+}
+@media (max-width:520px){
+  .mapa-goto{width:100%; min-width:0}
+}
 .mapa-zoom{min-width:58px; text-align:center; font-family:var(--font); font-size:13px; font-weight:700; color:rgba(255,255,255,.7)}
 
 .mapa-viewport{
@@ -74,7 +111,7 @@
 
 /* referencias */
 .mapa-legend{
-  display:flex; flex-wrap:wrap; gap:8px 18px; margin:0 0 16px; padding:0; list-style:none;
+  display:flex; flex-wrap:wrap; gap:8px 18px; margin:16px 0 0; padding:0; list-style:none;
 }
 .mapa-legend li{
   display:flex; align-items:center; gap:8px;

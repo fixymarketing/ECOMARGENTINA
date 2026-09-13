@@ -722,10 +722,15 @@
   .market-entry-card { min-height: 0; }
   .market-entry-card .market-entry-card__header { min-height: 0; }
   .market-entry-card .market-entry-card__name { min-height: 0; max-height: none; max-width: 62%; }
-  .argentina-market__stats-bar { grid-template-columns: 1fr; }
+  .argentina-market__stats-bar { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .argentina-market__stats-bar .argentina-market__stat:nth-of-type(3) { grid-column: 1 / -1; }
   .argentina-market__stat .stat__lbl { max-width: 260px; }
-  .ecosystem__grid { display: grid; grid-template-columns: 1fr; overflow: visible; margin: 0; padding: 0; }
-  .ecosystem__grid .ecosystem__item { width: 100%; flex: none; }
+  .ecosystem__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; overflow: visible; margin: 0; padding: 0; }
+  .ecosystem__grid .ecosystem__item { width: 100%; flex: none; aspect-ratio: 1/1; }
+  .ecosystem__item-content { inset: auto 10px 10px; gap: 3px; }
+  .ecosystem__item-content strong { font-size: 15px; }
+  .ecosystem__item-content > span:last-child { font-size: 11px; }
+  .ecosystem__item-number { font-size: 11px; }
   .ecosystem__more { display: inline-flex; }
   .latam-mission__text { font-size: 15px; }
   .latam-mission__event strong { font-size: 14px; }
@@ -796,3 +801,33 @@
 .cinta-logos__icon--barco    { --ico: url('../images/icon-cinta-barco.svg'); }
 .cinta-logos__icon--megafono { --ico: url('../images/icon-cinta-megafono.svg'); }
 .cinta-logos__icon--tarjeta  { --ico: url('../images/icon-cinta-tarjeta.svg'); }
+
+
+/* ── EFFIX (mobile): titulo mas arriba y CTA compacto dentro del panel celeste ── */
+@media (max-width: 1024px) {
+  .latam-mission .otras__left {
+    justify-content: flex-start;
+    padding: 24px 24px 28px;
+    gap: 14px;
+  }
+  .latam-mission .otras__title { font-size: 40px; }
+  .latam-mission .latam-mission__eyebrow { margin-bottom: 10px; font-size: 12px; }
+  .latam-mission .latam-mission__text { margin-top: 12px; }
+  .latam-mission .latam-mission__event { gap: 10px; }
+  .latam-mission .latam-mission__event .btn--blue {
+    padding: 9px 18px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+}
+
+
+/* ── EFFIX: texto en blanco sobre el panel celeste ── */
+.latam-mission .otras__title { color: #fff; }
+.latam-mission .latam-mission__text { color: rgba(255,255,255,.92); }
+.latam-mission .latam-mission__event { color: #fff; }
+.latam-mission .latam-mission__event strong { color: #fff; }
+.latam-mission .latam-mission__event span { color: rgba(255,255,255,.82); }
+
+/* ── Contador flotante: naranja ECOM y texto blanco ── */
+.cd-float__label { color: #fff; }

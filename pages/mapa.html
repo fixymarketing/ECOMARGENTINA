@@ -36,10 +36,8 @@
     <nav class="header__nav" aria-label="Navegación principal">
       <a href="../index.html#como-entrar">Cómo entrar</a>
       <a href="../index.html#por-que-argentina">Por qué Argentina</a>
-      <a href="../index.html#como-funciona">Cómo funciona</a>
       <a href="../index.html#ecosistema">Ecosistema</a>
       <a href="../index.html#effix">EFFIX 2026</a>
-      <a href="../index.html#faq">FAQ</a>
       <a href="mapa.html" class="is-current">Mapa</a>
     </nav>
 
@@ -73,24 +71,16 @@
       <span>Cómo entrar</span>
     </a>
     <a href="../index.html#por-que-argentina" class="mobile-menu__item">
-      <img src="../images/Icon_oradores.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
+      <img src="../images/icon-bandera-ar.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
       <span>Por qué Argentina</span>
     </a>
-    <a href="../index.html#como-funciona" class="mobile-menu__item">
-      <img src="../images/Icon_mapa.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
-      <span>Cómo funciona</span>
-    </a>
     <a href="../index.html#ecosistema" class="mobile-menu__item">
-      <img src="../images/Icon_sponsor.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
+      <img src="../images/Icon-networking.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
       <span>Ecosistema</span>
     </a>
     <a href="../index.html#effix" class="mobile-menu__item">
       <img src="../images/Icon_agenda.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
       <span>EFFIX 2026</span>
-    </a>
-    <a href="../index.html#faq" class="mobile-menu__item">
-      <img src="../images/Icon_faq.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
-      <span>FAQ</span>
     </a>
     <a href="mapa.html" class="mobile-menu__item">
       <img src="../images/Icon_mapa.svg" alt="" aria-hidden="true" class="mobile-menu__icon">
@@ -130,19 +120,26 @@
         <button type="button" class="mapa-btn" id="mapa-zoom-in" aria-label="Acercar">+</button>
         <button type="button" class="mapa-btn mapa-btn--wide" id="mapa-reset">Ver todo</button>
       </div>
-      <button type="button" class="mapa-btn mapa-btn--primary" id="mapa-goto">Ir a nuestro stand →</button>
+      <button type="button" class="mapa-btn mapa-btn--primary mapa-goto" id="mapa-goto">
+        <span class="mapa-goto__pin" aria-hidden="true">
+          <svg viewBox="-22 -56 44 60" width="26" height="35">
+            <defs>
+              <linearGradient id="ar-flag-btn" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#74acdf"/><stop offset="0.34" stop-color="#74acdf"/>
+                <stop offset="0.34" stop-color="#ffffff"/><stop offset="0.66" stop-color="#ffffff"/>
+                <stop offset="0.66" stop-color="#74acdf"/><stop offset="1" stop-color="#74acdf"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 0 l-14.6 -21.2 a17.9 17.9 0 1 1 29.2 0 z" fill="#00c24a" stroke="#ffffff" stroke-width="1.6"/>
+            <circle cx="0" cy="-31.6" r="11.4" fill="url(#ar-flag-btn)" stroke="#ffffff" stroke-width="1.8"/>
+          </svg>
+        </span>
+        <span class="mapa-goto__label">Ir a nuestro stand <b>AM85</b></span>
+        <span class="mapa-goto__arrow" aria-hidden="true">→</span>
+      </button>
     </div>
 
 
-    <ul class="mapa-legend">
-      <li><span class="mapa-legend__sw" style="background:#2f5ba8"></span>Pabellón Azul · Auditorio Prendas Control</li>
-      <li><span class="mapa-legend__sw" style="background:#c7e0a6"></span>Pabellón Verde · Auditorio EFFIX</li>
-      <li><span class="mapa-legend__sw" style="background:#e0e2e6"></span>Pabellón Blanco · Sala abierta</li>
-      <li><span class="mapa-legend__sw" style="background:#dcb734"></span>Pabellón Amarillo · Auditorio MARKETING</li>
-      <li><span class="mapa-legend__sw" style="background:#6d4e9c"></span>Gran Salón · Auditorio E-COMMERCE</li>
-      <li><span class="mapa-legend__sw" style="background:#d2aa54"></span>Zonas VIP y accesos</li>
-      <li><span class="mapa-legend__sw mapa-legend__sw--ar"></span><b>Stand ECOM ARGENTINA — AM85</b></li>
-    </ul>
     <div class="mapa-viewport" id="mapa-viewport">
       <svg id="mapa-svg" viewBox="0 0 2449 1405" role="img"
            aria-label="Plano oficial de la Feria EFFIX 2026 con la ubicación del stand AM85 de ECOM ARGENTINA en el Pabellón Amarillo">
@@ -159,7 +156,7 @@
           <!-- El pin se contra-escala por JS para mantener el mismo tamano en pantalla -->
           <g id="stand-pin" transform="translate(507 1171) scale(2.4)" aria-hidden="true">
             <path d="M0 0 l-14.6 -21.2 a17.9 17.9 0 1 1 29.2 0 z" fill="#00c24a" stroke="#ffffff" stroke-width="1.6"/>
-            <circle cx="0" cy="-38.7" r="11.4" fill="url(#ar-flag)" stroke="#ffffff" stroke-width="1.8"/>
+            <circle cx="0" cy="-31.6" r="11.4" fill="url(#ar-flag)" stroke="#ffffff" stroke-width="1.8"/>
           </g>
           <defs>
             <linearGradient id="ar-flag" x1="0" y1="0" x2="0" y2="1">
@@ -171,6 +168,17 @@
         </g>
       </svg>
     </div>
+
+    <ul class="mapa-legend">
+      <li><span class="mapa-legend__sw" style="background:#2f5ba8"></span>Pabellón Azul · Auditorio Prendas Control</li>
+      <li><span class="mapa-legend__sw" style="background:#c7e0a6"></span>Pabellón Verde · Auditorio EFFIX</li>
+      <li><span class="mapa-legend__sw" style="background:#e0e2e6"></span>Pabellón Blanco · Sala abierta</li>
+      <li><span class="mapa-legend__sw" style="background:#dcb734"></span>Pabellón Amarillo · Auditorio MARKETING</li>
+      <li><span class="mapa-legend__sw" style="background:#6d4e9c"></span>Gran Salón · Auditorio E-COMMERCE</li>
+      <li><span class="mapa-legend__sw" style="background:#d2aa54"></span>Zonas VIP y accesos</li>
+      <li><span class="mapa-legend__sw mapa-legend__sw--ar"></span><b>Stand ECOM ARGENTINA — AM85</b></li>
+    </ul>
+
     <p class="mapa-note">Plano oficial de la Feria EFFIX 2026. El contenido está sujeto a cambios por parte de la organización.</p>
   </div>
 </section>

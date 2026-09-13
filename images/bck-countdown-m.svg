@@ -12,7 +12,7 @@
       }
 
       .st2 {
-        fill: #ffe600;
+        fill: #e49a16;
       }
 
       .st3 {
@@ -36,7 +36,7 @@
     </linearGradient>
     <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="149.4" y1="-35.5" x2="164.1" y2="44" gradientTransform="translate(0 92) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f5f3ed"/>
-      <stop offset="1" stop-color="#ffe600"/>
+      <stop offset="1" stop-color="#e49a16"/>
     </linearGradient>
   </defs>
   <g data-figma-bg-blur-radius="14">

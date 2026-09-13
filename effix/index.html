@@ -115,14 +115,27 @@
     .code-box strong { display:block; margin:6px 0 2px; font-size:1.35rem; font-weight:900; color:var(--navy); letter-spacing:-.02em; }
     .code-box span { font-size:.8rem; color:rgba(5,45,80,.6); }
 
-    /* Stats */
-    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px; }
-    .stat { padding:26px; border:1px solid var(--line); border-radius:14px; background:var(--white); }
-    .dark .stat { background:#083f6e; border-color:#1d5c93; }
-    .stat b { display:block; font-size:2rem; font-weight:900; color:var(--navy); letter-spacing:-.03em; }
-    .dark .stat b { color:var(--white); }
-    .stat span { font-size:.9rem; color:var(--muted); }
-    .dark .stat span { color:#cfe0f0; }
+    /* Que es EFFIX */
+    #que-es { position:relative; overflow:hidden; }
+    #que-es::before {
+      content:""; position:absolute; z-index:0; pointer-events:none;
+      right:-30px; bottom:-20px; width:min(720px,80%); aspect-ratio:1150 / 232;
+      background:url("assets/logo-effix-2026.webp") no-repeat center / contain;
+      opacity:.06;
+    }
+    #que-es .shell { position:relative; z-index:1; }
+    .effix-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .effix-grid .lead { margin:22px 0 0; }
+    .effix-grid .button { margin-top:30px; }
+    .effix-cards { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .ecard { padding:28px 26px; border-radius:20px; box-shadow:6px 6px 0 rgba(5,45,80,.14); }
+    .ecard b { display:block; font-size:clamp(2.2rem,3.4vw,3.3rem); font-weight:900; line-height:1; letter-spacing:-.035em; }
+    .ecard span { display:block; margin-top:12px; font-size:.95rem; font-weight:700; line-height:1.25; }
+    .ecard small { display:block; margin-top:8px; font-size:.82rem; font-weight:500; }
+    .ecard--white { background:var(--white); color:var(--navy); border:1px solid var(--line); }
+    .ecard--orange { background:var(--orange); color:var(--navy); margin-top:28px; }
+    .ecard--blue { grid-column:1 / -1; margin-top:6px; background:var(--blue-ink); color:var(--white); box-shadow:6px 6px 0 rgba(228,154,22,.45); }
+    .ecard--blue small { color:rgba(255,255,255,.85); }
 
     /* Grillas de tarjetas */
     .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:42px; }
@@ -183,14 +196,29 @@
     .closing { text-align:center; }
     .closing .lead { margin-inline:auto; }
     .closing img { width:190px; margin:40px auto 0; }
-    .closing { padding-bottom:96px; }
+    .closing { --sky-w:min(540px,58%); padding-bottom:96px; position:relative; overflow:hidden; }
+    /* silueta de Medellin */
+    .closing::after {
+      content:""; position:absolute; z-index:0; pointer-events:none;
+      right:-16px; bottom:4px; width:var(--sky-w); aspect-ratio:2090 / 558;
+      background:url("assets/medellin-effix.webp") no-repeat right bottom / contain;
+      filter:invert(1); opacity:.22;
+    }
+    /* la linea divisoria corre hasta donde arranca la silueta y sigue en su base */
+    .closing::before {
+      content:""; position:absolute; z-index:0; pointer-events:none;
+      left:0; right:calc(var(--sky-w) - 16px); bottom:5px; height:3px;
+      background:rgba(255,255,255,.22);
+    }
+    .closing .shell { position:relative; z-index:1; }
 
-    body > footer { padding:46px 0 70px; background:var(--navy); color:#cfe0f0; font-size:.9rem; border-top:3px solid rgba(255,255,255,.2); }
+    body > footer { padding:46px 0 70px; background:var(--navy); color:#cfe0f0; font-size:.9rem; }
     body > footer p { margin:4px 0; }
 
     @media (max-width:1080px) { .eyebrow__extra { display:none; } }
+    @media (max-width:980px) { .effix-grid { grid-template-columns:1fr; gap:44px; } }
     @media (max-width:900px) {
-      .grid,.grid--5,.stats,.topics { grid-template-columns:repeat(2,1fr); }
+      .grid,.grid--5,.topics { grid-template-columns:repeat(2,1fr); }
     }
     @media (max-width:760px) {
       nav { display:none; }
@@ -215,14 +243,19 @@
       .step-main .topics { grid-template-columns:1fr; }
 
       /* 3 · datos de EFFIX: dos arriba y uno abajo a lo ancho */
-      .stats { grid-template-columns:repeat(2,1fr); gap:12px; }
-      .stats .stat:last-child { grid-column:1 / -1; }
-      .stat { padding:20px; }
-      .stat b { font-size:1.6rem; }
+      .effix-cards { gap:14px; }
+      .ecard { padding:18px; border-radius:16px; box-shadow:4px 4px 0 rgba(5,45,80,.12); }
+      .ecard--orange { margin-top:0; }
+      .ecard--blue { box-shadow:4px 4px 0 rgba(228,154,22,.45); }
+      .ecard b { font-size:1.7rem; }
+      .ecard span { font-size:.85rem; margin-top:8px; }
 
       section { padding:64px 0; }
       blockquote { padding:24px; }
       blockquote footer { text-align:left; }
+      .closing { --sky-w:82%; }
+      .closing::after { opacity:.18; }
+      .closing::before { height:2px; bottom:4px; }
 
       /* eyebrow del hero: discreto y en una sola linea */
       .eyebrow--hero { margin-bottom:12px; font-size:.6rem; font-weight:600; letter-spacing:.08em; color:#7c8fa3; }
@@ -307,23 +340,33 @@
 
   <!-- QUÉ ES EFFIX -->
   <section id="que-es">
-    <div class="shell">
-      <div class="split">
-        <div>
-          <p class="eyebrow">El evento</p>
-          <h2>¿Qué es <span>EFFIX?</span></h2>
+    <div class="shell effix-grid">
+
+      <div>
+        <p class="eyebrow">Conocé el evento</p>
+        <h2>¿Qué es<br><span>EFFIX?</span></h2>
+        <p class="lead">Es uno de los grandes puntos de encuentro del comercio electrónico: marcas, emprendedores, proveedores, tecnología, logística y comunidades de distintos países reunidos en Medellín.</p>
+        <p class="lead">En el sitio oficial podés conocer los ponentes confirmados, los tipos de entrada, la programación y las ediciones anteriores.</p>
+        <a class="button" href="https://feriaeffix.com/" target="_blank" rel="noopener">Conocer EFFIX en su sitio oficial ↗</a>
+        <p class="note">El enlace se abre en una pestaña nueva para que no pierdas esta página.</p>
+      </div>
+
+      <div class="effix-cards">
+        <div class="ecard ecard--white">
+          <b>+350</b>
+          <span>stands de productos y servicios</span>
         </div>
-        <div>
-          <p>Es uno de los grandes puntos de encuentro del comercio electrónico: marcas, emprendedores, proveedores, tecnología, logística y comunidades de distintos países reunidos en Medellín. En el sitio oficial podés conocer los ponentes confirmados, los tipos de entrada, la programación y las ediciones anteriores.</p>
-          <a class="button" href="https://feriaeffix.com/" target="_blank" rel="noopener">Conocer EFFIX en su sitio oficial ↗</a>
-          <p class="note">El enlace se abre en una pestaña nueva para que no pierdas esta página.</p>
+        <div class="ecard ecard--orange">
+          <b>+200</b>
+          <span>conferencias, paneles y talleres</span>
+        </div>
+        <div class="ecard ecard--blue">
+          <b>16—18 OCT</b>
+          <span>entradas generales</span>
+          <small>Black y VIP: 15 al 19 de octubre</small>
         </div>
       </div>
-      <div class="stats">
-        <div class="stat"><b>+350</b><span>stands de productos y servicios</span></div>
-        <div class="stat"><b>+200</b><span>conferencias, paneles y talleres</span></div>
-        <div class="stat"><b>16—18 OCT</b><span>entradas generales. Black y VIP: 15 al 19 de octubre</span></div>
-      </div>
+
     </div>
   </section>
 

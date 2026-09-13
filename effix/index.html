@@ -3,75 +3,524 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Argentina en EFFIX 2026: una comunidad para viajar a Medellín, aprender, conectar y volver con ideas concretas.">
+  <meta name="description" content="Argentina en EFFIX 2026: una comunidad argentina que viaja a Medellín para aprender, conectar y volver con un plan concreto para aplicar.">
   <title>Argentina en EFFIX 2026 | Ecom Argentina</title>
   <link rel="canonical" href="https://ecomargentina.com/effix/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ecom Argentina">
   <meta property="og:title" content="Argentina en EFFIX 2026">
-  <meta property="og:description" content="Sumate a la comunidad argentina que viaja a EFFIX 2026 en Medellín: aprender, conectar y volver con un plan concreto.">
+  <meta property="og:description" content="No viajes solo a mirar. Volvé con algo para aplicar. Sumate a la comunidad argentina que viaja a EFFIX 2026 en Medellín.">
   <meta property="og:url" content="https://ecomargentina.com/effix/">
-  <meta property="og:image" content="https://ecomargentina.com/effix/assets/effix-collage.webp">
+  <meta property="og:image" content="https://ecomargentina.com/effix/assets/stand-AR.webp">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
   <style>
-    :root { --navy:#051548; --blue:#0567ee; --yellow:#ffe600; --ink:#111827; --muted:#5e6472; --paper:#f5f4f2; --white:#fff; --line:#dededa; }
+    :root { --navy:#052d50; --blue:#5797d4; --blue-ink:#2c6ba5; --orange:#e49a16; --soft:#e7f1fb; --ink:#12202e; --muted:#5b6a7d; --paper:#f6f8fb; --white:#fff; --line:#dbe3ed; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,sans-serif; line-height:1.5; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:'Montserrat',Arial,Helvetica,sans-serif; line-height:1.55; }
     a { color:inherit; text-decoration:none; }
     img { display:block; max-width:100%; }
     .shell { width:min(1120px,calc(100% - 36px)); margin:auto; }
+
+    /* Header */
     header { position:sticky; top:0; z-index:5; background:var(--navy); color:var(--white); }
     .nav { min-height:70px; display:flex; align-items:center; gap:24px; }
-    .logo { width:170px; padding:5px 9px; border-radius:6px; background:var(--white); }
-    nav { margin-left:auto; display:flex; gap:22px; font-size:.9rem; }
-    .button { display:inline-block; padding:13px 19px; border-radius:7px; background:var(--blue); color:var(--white); font-weight:800; }
-    .yellow { background:var(--yellow); color:var(--navy); }
-    .hero { padding:80px 0 90px; background:linear-gradient(110deg,var(--paper) 0 58%,#dcecff 58%); }
-    .hero-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:42px; }
-    .eyebrow { color:var(--blue); font-size:.76rem; font-weight:900; letter-spacing:.14em; }
-    h1,h2,h3 { margin:0; color:var(--navy); line-height:1; }
-    h1 { font-size:clamp(3.7rem,8vw,7.2rem); text-transform:uppercase; letter-spacing:-.07em; }
-    h1 span,h2 span { color:var(--blue); }
-    h2 { font-size:clamp(2.3rem,5vw,4.8rem); letter-spacing:-.06em; }
-    .lead { max-width:610px; margin:24px 0 30px; color:var(--muted); font-size:1.15rem; }
-    .actions { display:flex; flex-wrap:wrap; gap:18px; align-items:center; }
-    .hero-art { position:relative; }
-    .hero-art::before { content:""; position:absolute; inset:9% 3%; border-radius:45%; background:var(--blue); transform:rotate(-8deg); }
-    .hero-art img { position:relative; z-index:1; width:min(100%,540px); margin:auto; transform:rotate(2deg); }
-    section { padding:88px 0; }
-    .yellow-band { background:var(--yellow); }
+    .logo { width:180px; }
+    nav { margin-left:auto; display:flex; gap:22px; font-size:.86rem; font-weight:600; }
+    nav a:hover { color:var(--orange); }
+
+    /* Botones */
+    .button { display:inline-block; padding:14px 20px; border-radius:8px; background:var(--blue-ink); color:var(--white); font-weight:800; font-size:.95rem; }
+    .button:hover { filter:brightness(1.08); }
+    .yellow { background:var(--orange); color:var(--white); }
+    .ghost { font-weight:700; color:var(--navy); border-bottom:2px solid var(--orange); padding-bottom:2px; }
+    .dark .ghost { color:var(--white); }
+
+    /* Tipografía */
+    h1,h2,h3 { margin:0; color:var(--navy); line-height:1.02; }
+    h1 { font-size:clamp(2.6rem,4.9vw,4.3rem); text-transform:uppercase; letter-spacing:-.04em; font-weight:900; }
+    h2 { font-size:clamp(2rem,4.2vw,3.6rem); letter-spacing:-.035em; font-weight:900; }
+    h3 { font-size:1.3rem; font-weight:800; letter-spacing:-.01em; }
+    h1 span,h2 span { color:var(--blue-ink); }
+    .dark h1 span,.dark h2 span { color:var(--blue); }
+    .eyebrow { margin:0 0 14px; color:var(--blue-ink); font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow--hero { margin-bottom:18px; font-size:.63rem; font-weight:600; letter-spacing:.07em; white-space:nowrap; color:#6b8199; }
+    .dark .eyebrow { color:var(--blue); }
+    .lead { max-width:680px; margin:24px 0 30px; color:var(--muted); font-size:1.1rem; }
+    .dark .lead { color:#cfe0f0; }
+    .note { margin:14px 0 0; color:var(--muted); font-size:.84rem; }
+    .dark .note { color:#9fb8ce; }
+
+    section { padding:86px 0; }
     .dark { background:var(--navy); color:var(--white); }
     .dark h2,.dark h3 { color:var(--white); }
+    .soft-band { background:#5797d4; padding-top:56px; }
+    .soft-band h2 { color:var(--navy); }
+    .soft-band p { color:#0d2c47; }
+    .soft-band .lead { color:#0d2c47; }
+
+    .soft-band .note { color:rgba(255,255,255,.88); }
+    .soft-band .button { background:var(--navy); }
+    .soft-band .badge { background:var(--navy); }
+    .soft-band .badge--off { background:var(--orange); color:var(--white); }
+    .soft-band h2 span { color:var(--white); }
+
+    /* Hero */
+    .hero { position:relative; overflow:hidden; padding:84px 0 92px; background:linear-gradient(160deg,var(--paper) 0 55%,var(--soft) 100%); }
+    /* formas de fondo del hero */
+    .hero::before {
+      content:""; position:absolute; z-index:0; pointer-events:none;
+      width:780px; height:780px; right:-150px; top:-190px;
+      transform:rotate(-10deg);
+      border-radius:46% 54% 52% 48% / 48% 42% 58% 52%;
+      background:radial-gradient(circle at 34% 30%, rgba(87,151,212,.55), rgba(87,151,212,.26) 52%, rgba(87,151,212,0) 73%);
+    }
+    .hero::after {
+      content:""; position:absolute; z-index:0; pointer-events:none;
+      width:210px; height:210px; right:42%; bottom:-70px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(228,154,22,.34), rgba(228,154,22,0) 70%);
+    }
+    .hero .shell { position:relative; z-index:1; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+    .chip { padding:8px 15px; border:1px solid var(--line); border-radius:999px; background:var(--white); font-size:.8rem; font-weight:700; color:var(--navy); }
+    .actions { display:flex; flex-wrap:wrap; gap:18px; align-items:center; }
+
+    .hero-art { width:100%; max-width:560px; height:auto; margin-inline:auto; }
+    .hero-art-mob { display:none; }
+
+    /* Placeholder de imagen (queda disponible por si hace falta) */
+    .ph { display:grid; place-items:center; aspect-ratio:4/3; border:2px dashed #a9c3dd; border-radius:16px; background:var(--soft); color:#6d8aa6; text-align:center; padding:24px; }
+    .ph b { display:block; font-size:.82rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .ph span { font-size:.78rem; }
+
+    /* Franja de descuento */
+    .badge-row { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-bottom:22px; }
+    .badge { padding:7px 14px; border-radius:999px; background:var(--navy); color:var(--white); font-size:.72rem; font-weight:800; letter-spacing:.14em; }
+    .badge--off { background:var(--orange); color:var(--navy); }
+    .ticker { margin:0 0 44px; padding:14px 0; overflow:hidden; background:var(--white); }
+    .ticker__track { display:flex; width:max-content; animation:ticker-run 46s linear infinite; }
+    .ticker__track span { flex:0 0 auto; padding-right:.5em; white-space:nowrap; font-size:.8rem; font-weight:800; letter-spacing:.2em; color:var(--navy); }
+    @keyframes ticker-run { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+    .ticker:hover .ticker__track { animation-play-state:paused; }
+    @media (prefers-reduced-motion: reduce) { .ticker__track { animation:none; } }
+    .split { display:grid; grid-template-columns:.95fr 1.05fr; gap:60px; align-items:center; }
+    .ticket { width:100%; max-width:400px; height:auto; margin:20px 0 24px; }
+    .code-box { margin:22px 0; padding:20px 22px; border:2px dashed rgba(5,45,80,.3); border-radius:12px; background:var(--white); }
+    .code-box b { display:block; font-size:.74rem; font-weight:900; letter-spacing:.14em; color:rgba(5,45,80,.6); }
+    .code-box strong { display:block; margin:6px 0 2px; font-size:1.35rem; font-weight:900; color:var(--navy); letter-spacing:-.02em; }
+    .code-box span { font-size:.8rem; color:rgba(5,45,80,.6); }
+
+    /* Stats */
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:44px; }
+    .stat { padding:26px; border:1px solid var(--line); border-radius:14px; background:var(--white); }
+    .dark .stat { background:#083f6e; border-color:#1d5c93; }
+    .stat b { display:block; font-size:2rem; font-weight:900; color:var(--navy); letter-spacing:-.03em; }
+    .dark .stat b { color:var(--white); }
+    .stat span { font-size:.9rem; color:var(--muted); }
+    .dark .stat span { color:#cfe0f0; }
+
+    /* Grillas de tarjetas */
     .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:42px; }
-    .card { padding:28px; background:var(--white); border:1px solid var(--line); border-radius:14px; }
-    .dark .card { background:#10235e; border-color:#30447d; }
-    .card h3 { margin-bottom:14px; font-size:1.45rem; }
-    .card p { margin:0; color:var(--muted); }
-    .dark .card p { color:#d6dcf0; }
-    .split { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
-    .split p { color:var(--muted); font-size:1.08rem; }
-    .feature-image { width:100%; border-radius:14px; }
-    .faq { max-width:820px; margin:38px auto 0; }
+    .grid--5 { grid-template-columns:repeat(5,1fr); }
+    .card { padding:26px; background:var(--white); border:1px solid var(--line); border-radius:14px; }
+    .dark .card { background:#083f6e; border-color:#1d5c93; }
+    .card p { margin:12px 0 0; color:var(--muted); font-size:.95rem; }
+    .dark .card p { color:#cfe0f0; }
+    .num { display:block; margin-bottom:10px; font-size:.74rem; font-weight:900; letter-spacing:.14em; color:var(--orange); }
+    .dark .num { color:var(--orange); }
+
+    /* Cita */
+    blockquote { margin:46px 0 0; padding:32px 34px; border-left:5px solid var(--orange); background:var(--white); border-radius:0 14px 14px 0; }
+    .dark blockquote { background:#083f6e; }
+    blockquote p { margin:0; font-size:1.25rem; font-weight:700; color:var(--navy); letter-spacing:-.015em; }
+    .dark blockquote p { color:var(--white); }
+    blockquote footer { display:block; margin-top:18px; padding:0; background:none; text-align:right; font-size:.8rem; line-height:1.4; color:var(--muted); }
+    .dark blockquote footer { color:#9fb8ce; background:none; }
+    blockquote footer b { display:inline; font-size:.84rem; color:var(--navy); }
+    .dark blockquote footer b { color:var(--white); }
+
+    /* Listas con check */
+    .ticks { margin:26px 0 0; padding:0; list-style:none; display:grid; gap:12px; }
+    .ticks li { position:relative; padding-left:28px; font-size:1rem; }
+    .ticks li::before { content:""; position:absolute; left:0; top:.45em; width:12px; height:12px; border-radius:3px; background:var(--orange); }
+
+    /* Temas de la charla */
+    .topics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:34px 0 0; padding:0; list-style:none; }
+    .topics li { padding:16px; border:1px solid #1d5c93; border-radius:12px; background:#083f6e; font-size:.9rem; font-weight:600; }
+
+    /* Seccion "El primer paso" */
+    .step-section { padding:86px 0; background:var(--paper); }
+    .step-grid { display:grid; grid-template-columns:1.3fr .82fr; border-radius:24px; overflow:hidden; }
+    .step-main { padding:clamp(32px,4vw,60px); background:var(--navy); color:var(--white); }
+    .step-main h2 { color:var(--white); }
+    .step-side { padding:clamp(32px,4vw,48px); background:var(--blue-ink); color:var(--white); display:flex; flex-direction:column; justify-content:center; }
+    .step-eyebrow { color:var(--orange); }
+    .step-eyebrow--side { color:rgba(255,255,255,.75); margin-bottom:18px; }
+    .step-text { max-width:620px; margin:26px 0 0; color:#cfe0f0; font-size:1.05rem; }
+    .step-main .topics { margin-top:34px; grid-template-columns:repeat(2,1fr); }
+    .step-main .topics li { background:#083f6e; border-color:#1d5c93; }
+    .step-box { padding:24px; border:1px dashed rgba(255,255,255,.5); border-radius:14px; background:rgba(255,255,255,.06); }
+    .step-box strong { display:block; font-size:1.25rem; font-weight:800; letter-spacing:-.02em; }
+    .step-box span { display:block; margin-top:6px; color:rgba(255,255,255,.8); font-size:.95rem; }
+    .step-cta { display:block; margin-top:20px; text-align:center; }
+    .step-note { margin:16px 0 0; text-align:center; font-size:.84rem; color:rgba(255,255,255,.78); }
+
+    /* FAQ */
+    .faq { max-width:840px; margin:38px auto 0; }
     details { padding:20px 0; border-bottom:1px solid var(--line); }
-    summary { cursor:pointer; color:var(--navy); font-weight:800; font-size:1.1rem; }
-    details p { color:var(--muted); }
-    footer { padding:36px 0 70px; background:var(--navy); color:#d6dcf0; }
-    footer img { width:170px; margin-bottom:18px; }
-    @media (max-width:760px) { nav { display:none; } .hero { padding-top:48px; } .hero-grid,.split { grid-template-columns:1fr; } .grid { grid-template-columns:1fr; } h1 { font-size:clamp(3.3rem,17vw,5.4rem); } section { padding:68px 0; } }
+    summary { cursor:pointer; color:var(--navy); font-weight:800; font-size:1.05rem; list-style:none; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"+"; float:right; color:var(--orange); font-weight:900; }
+    details[open] summary::after { content:"−"; }
+    details p { margin:14px 0 0; color:var(--muted); }
+
+    /* Cierre */
+    .closing { text-align:center; }
+    .closing .lead { margin-inline:auto; }
+    .closing img { width:190px; margin:40px auto 0; }
+    .closing { padding-bottom:96px; }
+
+    body > footer { padding:46px 0 70px; background:var(--navy); color:#cfe0f0; font-size:.9rem; border-top:3px solid rgba(255,255,255,.2); }
+    body > footer p { margin:4px 0; }
+
+    @media (max-width:1080px) { .eyebrow__extra { display:none; } }
+    @media (max-width:900px) {
+      .grid,.grid--5,.stats,.topics { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:760px) {
+      nav { display:none; }
+      /* 1 · boton del navbar mas chico para que entre la frase completa */
+      .nav { gap:12px; }
+      .logo { width:132px; }
+      .nav .button { margin-left:auto; }
+      .nav .button { padding:9px 12px; font-size:.72rem; line-height:1.15; border-radius:7px; }
+
+      /* 2 · en mobile va la imagen propia, despues del titulo */
+      .hero { padding:52px 0 60px; }
+      .hero::before { width:460px; height:460px; right:-150px; top:-40px; }
+      .hero::after { width:180px; height:180px; right:auto; left:-70px; bottom:auto; top:46%; }
+      .hero-art { display:none; }
+      .hero-art-mob { display:block; width:100%; max-width:440px; height:auto; margin:26px auto 6px; }
+      .hero .lead { margin-top:22px; }
+
+      .hero-grid,.split { grid-template-columns:1fr; gap:34px; }
+      .grid,.grid--5,.topics { grid-template-columns:1fr; }
+      .step-section { padding:64px 0; }
+      .step-grid { grid-template-columns:1fr; border-radius:20px; }
+      .step-main .topics { grid-template-columns:1fr; }
+
+      /* 3 · datos de EFFIX: dos arriba y uno abajo a lo ancho */
+      .stats { grid-template-columns:repeat(2,1fr); gap:12px; }
+      .stats .stat:last-child { grid-column:1 / -1; }
+      .stat { padding:20px; }
+      .stat b { font-size:1.6rem; }
+
+      section { padding:64px 0; }
+      blockquote { padding:24px; }
+      blockquote footer { text-align:left; }
+
+      /* eyebrow del hero: discreto y en una sola linea */
+      .eyebrow--hero { margin-bottom:12px; font-size:.6rem; font-weight:600; letter-spacing:.08em; color:#7c8fa3; }
+      .eyebrow__extra { display:none; }
+    }
   </style>
 </head>
 <body>
-  <header><div class="shell nav"><a href="#inicio"><img class="logo" src="assets/ecomarg-logo.png" alt="Ecom Argentina"></a><nav><a href="#experiencia">Experiencia</a><a href="#comunidad">Comunidad</a><a href="#preguntas">Preguntas</a></nav><a class="button yellow" href="#charlas">Registrarme</a></div></header>
-  <main id="inicio">
-    <section class="hero"><div class="shell hero-grid"><div><p class="eyebrow">ARGENTINA EN EFFIX 2026 · 16—18 OCT · MEDELLÍN</p><h1>No viajes solo<br><span>a mirar.</span></h1><p class="lead">Sumate a la comunidad argentina que viaja a EFFIX para aprender, conectar y transformar lo vivido en próximos pasos concretos.</p><div class="actions"><a class="button" href="#charlas">Quiero conocer la experiencia</a><a href="#descuento">Ver 50% de descuento</a></div></div><div class="hero-art"><img src="assets/effix-collage.webp" alt="Experiencia EFFIX en Medellín"></div></div></section>
-    <section id="descuento" class="yellow-band"><div class="shell split"><div><p class="eyebrow">UN BENEFICIO PARA EMPEZAR</p><h2>Tu entrada a EFFIX,<br><span>50% más cerca.</span></h2></div><div><p>El código promocional será público y podrás utilizarlo sin registrarte ni dejar tus datos.</p><a class="button" href="https://feriaeffix.com/" target="_blank" rel="noopener">Ver entradas oficiales</a></div></div></section>
-    <section id="experiencia"><div class="shell"><p class="eyebrow">LA EXPERIENCIA</p><h2>Aprender, conectar<br><span>y aplicar.</span></h2><div class="grid"><article class="card"><h3>Entender</h3><p>Descubrí oportunidades regionales y nuevas formas de hacer crecer tu negocio.</p></article><article class="card"><h3>Conectar</h3><p>Encontrá aliados, herramientas y personas con los mismos desafíos.</p></article><article class="card"><h3>Aplicar</h3><p>Convertí ideas y contactos en un plan concreto para los próximos 30, 60 y 90 días.</p></article></div></div></section>
-    <section class="dark"><div class="shell split"><img class="feature-image" src="assets/hub-stand.webp" alt="E-commerce Hub de Ecom Argentina en EFFIX"><div><p class="eyebrow">NUESTRO PUNTO DE ENCUENTRO</p><h2>Argentina no viaja sola.</h2><p>El E-commerce Hub de Ecom Argentina será el punto de referencia para encontrarnos, compartir aprendizajes y conectar con el ecosistema latinoamericano.</p><a class="button yellow" href="#charlas">Sumarme a la comunidad</a></div></div></section>
-    <section id="comunidad"><div class="shell"><p class="eyebrow">UNA COMUNIDAD ABIERTA</p><h2>Hay un lugar para vos<br><span>en esta conversación.</span></h2><div class="grid"><article class="card"><h3>Marcas online</h3><p>Herramientas, aliados y nuevas formas de escalar.</p></article><article class="card"><h3>Proveedores</h3><p>Entender el mercado y construir nuevas relaciones.</p></article><article class="card"><h3>Emprendedores</h3><p>Acelerar el aprendizaje y no recorrer solos el camino.</p></article></div></div></section>
-    <section id="charlas" class="dark"><div class="shell"><p class="eyebrow">EL PRIMER PASO</p><h2>Conocé cómo será<br><span>la experiencia.</span></h2><p class="lead" style="color:#d6dcf0">Participá de una charla virtual junto al equipo de Ecom Argentina. Te contaremos cómo funciona la comunidad y cómo aprovechar el viaje.</p><a class="button yellow" href="https://wa.me/5491126083975?text=Hola%2C%20quiero%20que%20me%20avisen%20las%20pr%C3%B3ximas%20fechas" target="_blank" rel="noopener">Quiero que me avisen</a></div></section>
-    <section id="preguntas"><div class="shell"><p class="eyebrow">PREGUNTAS FRECUENTES</p><h2>Todo claro<br><span>antes de viajar.</span></h2><div class="faq"><details><summary>¿Tiene costo participar?</summary><p>No. La participación es gratuita. Cada persona cubre sus gastos de viaje, alojamiento, traslados y entrada.</p></details><details><summary>¿Ecom Argentina organiza vuelos y hoteles?</summary><p>No funciona como agencia de viajes. Compartiremos tips y recomendaciones para ayudarte a organizarte.</p></details><details><summary>¿Necesito tener una empresa grande?</summary><p>No. La comunidad está abierta a marcas, proveedores, pymes y emprendedores argentinos.</p></details></div></div></section>
-  </main>
-  <footer><div class="shell"><img src="assets/ecomarg-logo.png" alt="Ecom Argentina"><p>Argentina en EFFIX 2026 · Medellín · 16 al 18 de octubre</p><p>Una iniciativa de Ecom Argentina, impulsada por FIXY Logística.</p></div></footer>
+
+<header>
+  <div class="shell nav">
+    <a href="#inicio"><img class="logo" src="assets/ecomarg-logo.png" alt="Ecom Argentina"></a>
+    <nav>
+      <a href="#experiencia">Nuestra experiencia</a>
+      <a href="#acompanamos">Cómo te acompañamos</a>
+      <a href="#comunidad">La comunidad</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="button yellow" href="#charlas">Registrarme a una charla</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow eyebrow--hero">Argentina en EFFIX 2026 · 16—18 OCT<span class="eyebrow__extra"> · Plaza Mayor · Medellín</span></p>
+        <h1>No viajes solo a mirar.<br><span>Volvé con algo para aplicar.</span></h1>
+        <img class="hero-art-mob" src="assets/hero-mob-effix.webp" alt="Credencial de visitante de Feria EFFIX 2026 y pasaje de Buenos Aires a Medellín" width="1000" height="659">
+        <p class="lead">Sumate a la comunidad argentina que viaja a EFFIX para aprender, conectar y transformar lo vivido en próximos pasos concretos.</p>
+        <div class="actions">
+          <a class="button" href="#acompanamos">Quiero conocer la experiencia</a>
+          <a class="ghost" href="#descuento">Ver 50% de descuento ↓</a>
+        </div>
+        <div class="chips">
+          <span class="chip">Participación gratuita</span>
+          <span class="chip">Actividades opcionales</span>
+          <span class="chip">Comunidad argentina</span>
+        </div>
+      </div>
+      <img class="hero-art" src="assets/hero-effix.webp" alt="Collage de la experiencia Argentina en EFFIX 2026: vuelo a Medellín, la feria, el stand y la comunidad" width="1000" height="1033">
+    </div>
+  </section>
+
+  <!-- DESCUENTO -->
+  <section id="descuento" class="soft-band">
+
+    <!-- banner en movimiento -->
+    <div class="ticker ticker--top" aria-hidden="true">
+      <div class="ticker__track">
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+        <span>APRENDER • CONECTAR • COMPARTIR • APLICAR • </span>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="split">
+        <div>
+          <h2>Tu entrada a<br>EFFIX,<br><span>50% más<br>cerca.</span></h2>
+          <p class="lead">Queremos que el costo de acceso no sea una barrera. El código será público y vas a poder utilizarlo sin registrarte ni dejar tus datos.</p>
+        </div>
+        <div>
+          <img class="ticket" src="assets/codigo-effix.webp" alt="Cupón con el código de descuento HUBARG: 50% OFF en tu entrada a la Feria EFFIX 2026" loading="lazy" width="900" height="596">
+          <a class="button" href="https://feriaeffix.com/" target="_blank" rel="noopener">Ver entradas en el sitio oficial ↗</a>
+          <p class="note">50% de descuento sobre la entrada a la feria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ ES EFFIX -->
+  <section id="que-es">
+    <div class="shell">
+      <div class="split">
+        <div>
+          <p class="eyebrow">El evento</p>
+          <h2>¿Qué es <span>EFFIX?</span></h2>
+        </div>
+        <div>
+          <p>Es uno de los grandes puntos de encuentro del comercio electrónico: marcas, emprendedores, proveedores, tecnología, logística y comunidades de distintos países reunidos en Medellín. En el sitio oficial podés conocer los ponentes confirmados, los tipos de entrada, la programación y las ediciones anteriores.</p>
+          <a class="button" href="https://feriaeffix.com/" target="_blank" rel="noopener">Conocer EFFIX en su sitio oficial ↗</a>
+          <p class="note">El enlace se abre en una pestaña nueva para que no pierdas esta página.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+350</b><span>stands de productos y servicios</span></div>
+        <div class="stat"><b>+200</b><span>conferencias, paneles y talleres</span></div>
+        <div class="stat"><b>16—18 OCT</b><span>entradas generales. Black y VIP: 15 al 19 de octubre</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA HISTORIA -->
+  <section id="experiencia" class="dark">
+    <div class="shell">
+      <p class="eyebrow">La historia que nos trajo hasta acá</p>
+      <h2>La primera vez fuimos sin agenda,<br>sin contactos y <span>sin saber qué íbamos a encontrar.</span></h2>
+      <p class="lead">Volvimos entendiendo que la oportunidad regional era real y que necesitábamos convertir el aprendizaje en decisiones.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="num">01 · ENTENDER</span>
+          <h3>Una idea encontró un camino.</h3>
+          <p>La regionalización era una expresión de deseo. EFFIX nos mostró la oportunidad y el cómo. Ahí comenzó a tomar forma FIXY Paraguay.</p>
+        </article>
+        <article class="card">
+          <span class="num">02 · DESARROLLAR</span>
+          <h3>El mercado mostró lo que faltaba.</h3>
+          <p>Las charlas y el networking revelaron que la logística tradicional no alcanzaba. Había que construir una operación 360 para poder escalar.</p>
+        </article>
+        <article class="card">
+          <span class="num">03 · CONECTAR</span>
+          <h3>Una conversación se volvió alianza.</h3>
+          <p>En la feria comenzaron las primeras charlas con Dropi y descubrimos un match directo para su desembarco en Argentina.</p>
+        </article>
+      </div>
+      <blockquote>
+        <p>“EFFIX no nos dio una fórmula mágica. Nos mostró que la oportunidad existía, qué nos faltaba y con quiénes podíamos construirla.”</p>
+        <footer><b>Maximiliano Saavedra</b> — CEO y fundador de FIXY Logística</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- CINCO MOMENTOS -->
+  <section id="acompanamos">
+    <div class="shell">
+      <p class="eyebrow">Una experiencia en cinco momentos</p>
+      <h2>No se trata de verlo todo.<br><span>Se trata de saber qué buscar.</span></h2>
+      <p class="lead">Vos organizás tu viaje. Nosotros sumamos contexto, comunidad y una forma concreta de aprovecharlo.</p>
+      <div class="grid grid--5">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Prepará</h3>
+          <p>Charla virtual previa, tips de entradas, alojamiento, zonas y organización del viaje.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Explorá</h3>
+          <p>Agenda recomendada según tu perfil para detectar las charlas, herramientas y espacios más relevantes.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Conectá</h3>
+          <p>Grupo privado, bienvenida en Medellín, presentaciones, networking y encuentro informal.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Interpretá</h3>
+          <p>Encuentros breves al cierre de cada jornada para compartir hallazgos y oportunidades.</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>Aplicá</h3>
+          <p>Taller posterior y Bitácora EFFIX para convertir ideas y contactos en un plan de 30, 60 y 90 días.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUB -->
+  <section class="dark">
+    <div class="shell split">
+      <img src="assets/stand-AR.webp" alt="Stand de Ecom Argentina en EFFIX 2026" style="border-radius:14px">
+      <div>
+        <p class="eyebrow">Nuestro punto de encuentro</p>
+        <h2>Esta vez, <span>Argentina no viaja sola.</span></h2>
+        <p class="lead">El E-commerce Hub de Ecom Argentina será el punto de referencia para encontrarnos, compartir aprendizajes y conectar con el ecosistema latinoamericano.</p>
+        <ul class="ticks">
+          <li>Bienvenida presencial en Medellín.</li>
+          <li>Encuentros al cierre de cada jornada.</li>
+          <li>Networking y actividades informales.</li>
+          <li>Participación libre y opcional.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMUNIDAD -->
+  <section id="comunidad">
+    <div class="shell">
+      <p class="eyebrow">Una comunidad abierta</p>
+      <h2>Hay un lugar para vos<br><span>en esta conversación.</span></h2>
+      <div class="grid">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Marcas que ya venden online</h3>
+          <p>Para encontrar herramientas, aliados y nuevas formas de escalar.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Proveedores del ecosistema</h3>
+          <p>Para entender hacia dónde va el mercado y construir nuevas relaciones.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Emprendedores que comienzan</h3>
+          <p>Para acelerar el aprendizaje y no recorrer solos el mismo camino.</p>
+        </article>
+      </div>
+      <p class="note"><b>No importa el tamaño de tu empresa.</b> La comunidad está abierta a todo el ecosistema argentino. La participación es gratuita y todas las actividades son opcionales.</p>
+    </div>
+  </section>
+
+  <!-- CHARLAS -->
+  <section id="charlas" class="step-section">
+    <div class="shell">
+      <div class="step-grid">
+
+        <div class="step-main">
+          <p class="eyebrow step-eyebrow">El primer paso</p>
+          <h2>Conocé cómo será<br>la experiencia.</h2>
+          <p class="step-text">Participá de una charla virtual junto a Maxi y el equipo de Ecom Argentina. Te vamos a contar cómo funciona la comunidad, qué estamos preparando y cómo aprovechar el viaje.</p>
+          <ul class="topics">
+            <li>Cómo usar el 50% OFF</li>
+            <li>Tips para organizarte</li>
+            <li>Actividades en Medellín</li>
+            <li>Acceso al grupo privado</li>
+          </ul>
+        </div>
+
+        <div class="step-side">
+          <p class="eyebrow step-eyebrow step-eyebrow--side">Próximas charlas</p>
+          <div class="step-box">
+            <strong>Fechas y horarios</strong>
+            <span>Se publicarán próximamente</span>
+          </div>
+          <a class="button yellow step-cta" href="https://wa.me/5491126083975?text=Hola%2C%20quiero%20que%20me%20avisen%20las%20pr%C3%B3ximas%20fechas" target="_blank" rel="noopener">Quiero que me avisen</a>
+          <p class="step-note">La charla es gratuita y no te obliga a confirmar el viaje.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="preguntas">
+    <div class="shell">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Todo claro<br><span>antes de viajar.</span></h2>
+      <div class="faq">
+        <details>
+          <summary>¿Tiene costo participar de la comunidad?</summary>
+          <p>No. La participación es gratuita. Cada persona organiza y cubre sus gastos de viaje, alojamiento, traslados y entrada.</p>
+        </details>
+        <details>
+          <summary>¿Ecom Argentina organiza vuelos y hoteles?</summary>
+          <p>No funciona como agencia de viajes ni realiza reservas. Compartiremos tips, zonas y recomendaciones para que puedas organizarte mejor.</p>
+        </details>
+        <details>
+          <summary>¿Necesito tener una empresa grande?</summary>
+          <p>No. Pueden sumarse marcas consolidadas, proveedores, pymes y emprendedores argentinos que recién están comenzando.</p>
+        </details>
+        <details>
+          <summary>¿Las actividades son obligatorias?</summary>
+          <p>No. La propuesta es abierta y flexible. Cada participante elige libremente en qué actividades quiere participar.</p>
+        </details>
+        <details>
+          <summary>¿Cómo ingreso al grupo de WhatsApp?</summary>
+          <p>Después de participar de una charla informativa recibirás el acceso al grupo privado de la comunidad.</p>
+        </details>
+        <details>
+          <summary>¿Puedo usar el descuento sin registrarme?</summary>
+          <p>Sí. El código promocional será público y podrás utilizarlo aunque no participes de las actividades de la comunidad.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="dark closing">
+    <div class="shell">
+      <p class="eyebrow">Argentina en EFFIX 2026</p>
+      <h2>No viajes solo a mirar.<br><span>Volvé con algo para aplicar.</span></h2>
+      <p class="lead">Ecom Argentina invita. La experiencia de FIXY abre el camino. La comunidad la construimos entre todos.</p>
+      <a class="button yellow" href="https://wa.me/5491126083975?text=Hola%2C%20quiero%20registrarme%20a%20una%20charla%20informativa" target="_blank" rel="noopener">Registrarme a una charla informativa</a>
+      <img src="assets/ecomarg-logo.png" alt="Ecom Argentina">
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <p>Argentina en EFFIX 2026 · Medellín · 16 al 18 de octubre</p>
+    <p>Una iniciativa de Ecom Argentina, impulsada por FIXY Logística.</p>
+  </div>
+</footer>
+
 </body>
 </html>

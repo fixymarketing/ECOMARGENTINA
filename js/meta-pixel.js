@@ -1,4 +1,5 @@
-// Meta Pixel (Facebook Argentina) — ID 1386950453328808
+// Meta Pixel — 1386950453328808 (Pixel MLA Sellers, de un tercero)
+//            + 1365636232405937 (ECOM ARGENTINA, BM Fixy Logistica DU001)
 // Init externalizado (no inline) para cumplir la CSP: script-src 'self' + connect.facebook.net.
 // El propio bootstrap carga fbevents.js de connect.facebook.net de forma async.
 !function(f,b,e,v,n,t,s)
@@ -10,4 +11,5 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1386950453328808');
+fbq('init', '1365636232405937');  // ECOM ARGENTINA - ecomargentina.com
 fbq('track', 'PageView');

@@ -179,11 +179,21 @@
     .step-main .topics li { background:#083f6e; border-color:#1d5c93; }
     .step-box { padding:24px; border:1px dashed rgba(255,255,255,.5); border-radius:14px; background:rgba(255,255,255,.06); }
     .step-dates { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
-    .step-date { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 16px; border-radius:12px; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); color:var(--white); text-decoration:none; transition:background .2s ease, transform .2s ease; }
-    .step-date:hover { background:rgba(255,255,255,.2); transform:translateY(-1px); }
-    .step-date b { font-size:1rem; font-weight:800; letter-spacing:-.01em; }
-    .step-date span { font-size:.82rem; color:rgba(255,255,255,.75); display:block; margin-top:2px; }
-    .step-date em { font-style:normal; font-size:.8rem; font-weight:800; color:var(--orange); white-space:nowrap; }
+    .step-date { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-radius:14px; background:var(--white); border:1px solid rgba(255,255,255,.25); color:var(--navy); text-decoration:none; box-shadow:0 8px 18px -10px rgba(0,0,0,.55); transition:transform .18s ease, box-shadow .18s ease; }
+    .step-date:hover { transform:translateY(-2px); box-shadow:0 16px 26px -12px rgba(0,0,0,.6); }
+    .step-date:active { transform:translateY(0); }
+    .step-dates .step-date b { font-size:1.05rem; font-weight:900; letter-spacing:-.01em; color:var(--navy); }
+    .step-dates .step-date span { font-size:.8rem; color:var(--muted); display:block; margin-top:2px; }
+    .step-dates .step-date > span { margin-top:0; }
+    .step-date em { font-style:normal; font-size:.82rem; font-weight:800; color:var(--white); white-space:nowrap; background:var(--orange); padding:9px 15px; border-radius:999px; animation:cta-latido 2.4s ease-in-out infinite; }
+    .step-date:nth-child(2) em { animation-delay:.35s; }
+    .step-date:nth-child(3) em { animation-delay:.7s; }
+    .step-date:hover em { animation:none; background:var(--navy); }
+    @keyframes cta-latido {
+      0%, 100% { box-shadow:0 0 0 0 rgba(228,154,22,.55); }
+      55%      { box-shadow:0 0 0 9px rgba(228,154,22,0); }
+    }
+    @media (prefers-reduced-motion:reduce) { .step-date em { animation:none; } }
     button.step-date { width:100%; font-family:inherit; text-align:left; cursor:pointer; }
 
     /* Modal de registro */

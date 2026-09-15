@@ -178,6 +178,35 @@
     .step-main .topics { margin-top:34px; grid-template-columns:repeat(2,1fr); }
     .step-main .topics li { background:#083f6e; border-color:#1d5c93; }
     .step-box { padding:24px; border:1px dashed rgba(255,255,255,.5); border-radius:14px; background:rgba(255,255,255,.06); }
+    .step-dates { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+    .step-date { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 16px; border-radius:12px; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18); color:var(--white); text-decoration:none; transition:background .2s ease, transform .2s ease; }
+    .step-date:hover { background:rgba(255,255,255,.2); transform:translateY(-1px); }
+    .step-date b { font-size:1rem; font-weight:800; letter-spacing:-.01em; }
+    .step-date span { font-size:.82rem; color:rgba(255,255,255,.75); display:block; margin-top:2px; }
+    .step-date em { font-style:normal; font-size:.8rem; font-weight:800; color:var(--orange); white-space:nowrap; }
+    button.step-date { width:100%; font-family:inherit; text-align:left; cursor:pointer; }
+
+    /* Modal de registro */
+    .reg-modal[hidden] { display:none; }
+    .reg-modal { position:fixed; inset:0; z-index:50; display:flex; align-items:center; justify-content:center; padding:20px; }
+    .reg-modal__overlay { position:absolute; inset:0; background:rgba(5,45,80,.72); backdrop-filter:blur(2px); }
+    .reg-card { position:relative; width:min(460px,100%); max-height:92vh; overflow-y:auto; background:var(--white); color:var(--ink); border-radius:18px; padding:28px; box-shadow:0 30px 60px -20px rgba(5,45,80,.6); }
+    .reg-card h3 { margin:0; font-size:1.35rem; letter-spacing:-.02em; color:var(--navy); }
+    .reg-card__date { margin:6px 0 20px; font-weight:700; color:var(--orange); font-size:.9rem; }
+    .reg-close { position:absolute; top:12px; right:14px; width:32px; height:32px; border:0; border-radius:50%; background:var(--soft); color:var(--navy); font-size:1.1rem; font-weight:800; cursor:pointer; line-height:1; }
+    .reg-close:hover { background:var(--line); }
+    .reg-field { display:block; margin-bottom:14px; }
+    .reg-field span { display:block; margin-bottom:5px; font-size:.78rem; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); }
+    .reg-field input { width:100%; padding:11px 13px; border:1px solid var(--line); border-radius:9px; font-family:inherit; font-size:.95rem; color:var(--ink); background:var(--paper); }
+    .reg-field input:focus { outline:2px solid var(--blue); outline-offset:1px; }
+    .reg-card .button { width:100%; border:0; text-align:center; cursor:pointer; font-family:inherit; margin-top:6px; }
+    .reg-card .button[disabled] { opacity:.6; cursor:wait; }
+    .reg-legal { margin:14px 0 0; font-size:.74rem; color:var(--muted); text-align:center; }
+    .reg-done { text-align:center; }
+    .reg-done__check { width:54px; height:54px; margin:0 auto 14px; border-radius:50%; background:#e8f7ee; color:#1a9d51; font-size:1.7rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+    .reg-done p { color:var(--muted); font-size:.92rem; }
+    .reg-done #reg-done-date { font-weight:800; color:var(--orange); margin:0 0 14px; }
+    .reg-done__mail { background:var(--soft); border-radius:12px; padding:14px 16px; margin:0 0 18px; color:var(--navy) !important; font-size:.88rem; }
     .step-box strong { display:block; font-size:1.25rem; font-weight:800; letter-spacing:-.02em; }
     .step-box span { display:block; margin-top:6px; color:rgba(255,255,255,.8); font-size:.95rem; }
     .step-cta { display:block; margin-top:20px; text-align:center; }
@@ -500,11 +529,24 @@
         <div class="step-side">
           <p class="eyebrow step-eyebrow step-eyebrow--side">Próximas charlas</p>
           <div class="step-box">
-            <strong>Fechas y horarios</strong>
-            <span>Se publicarán próximamente</span>
+            <strong>Elegí tu fecha</strong>
+            <span>Charla virtual por Google Meet · 1 hora</span>
+            <div class="step-dates">
+              <button type="button" class="step-date" data-charla="Lunes 21 de septiembre - 20:00 hs" data-meet="https://meet.google.com/nts-grjb-usd">
+                <span style="margin:0"><b>Lunes 21</b><span>20:00 hs (Argentina)</span></span>
+                <em>Anotarme →</em>
+              </button>
+              <button type="button" class="step-date" data-charla="Miércoles 23 de septiembre - 20:00 hs" data-meet="https://meet.google.com/rbn-idjr-keh">
+                <span style="margin:0"><b>Miércoles 23</b><span>20:00 hs (Argentina)</span></span>
+                <em>Anotarme →</em>
+              </button>
+              <button type="button" class="step-date" data-charla="Viernes 25 de septiembre - 20:00 hs" data-meet="https://meet.google.com/ggd-ried-aih">
+                <span style="margin:0"><b>Viernes 25</b><span>20:00 hs (Argentina)</span></span>
+                <em>Anotarme →</em>
+              </button>
+            </div>
           </div>
-          <a class="button yellow step-cta" href="https://wa.me/5491126083975?text=Hola%2C%20quiero%20que%20me%20avisen%20las%20pr%C3%B3ximas%20fechas" target="_blank" rel="noopener">Quiero que me avisen</a>
-          <p class="step-note">La charla es gratuita y no te obliga a confirmar el viaje.</p>
+          <p class="step-note">Elegí tu fecha, dejanos tus datos y te enviamos el link del Meet por mail. La charla es gratuita y no te obliga a confirmar el viaje. Al finalizar te invitamos al grupo privado de la comunidad.</p>
         </div>
 
       </div>
@@ -535,7 +577,7 @@
         </details>
         <details>
           <summary>¿Cómo ingreso al grupo de WhatsApp?</summary>
-          <p>Después de participar de una charla informativa recibirás el acceso al grupo privado de la comunidad.</p>
+          <p>Al finalizar la charla informativa te compartimos el acceso al grupo privado de la comunidad. También podés <a href="https://chat.whatsapp.com/H75TL5UXRr5LFeJ1r1OAke" target="_blank" rel="noopener">sumarte directamente desde acá</a>.</p>
         </details>
         <details>
           <summary>¿Puedo usar el descuento sin registrarme?</summary>
@@ -551,7 +593,7 @@
       <p class="eyebrow">Argentina en EFFIX 2026</p>
       <h2>No viajes solo a mirar.<br><span>Volvé con algo para aplicar.</span></h2>
       <p class="lead">Ecom Argentina invita. La experiencia de FIXY abre el camino. La comunidad la construimos entre todos.</p>
-      <a class="button yellow" href="https://wa.me/5491126083975?text=Hola%2C%20quiero%20registrarme%20a%20una%20charla%20informativa" target="_blank" rel="noopener">Registrarme a una charla informativa</a>
+      <a class="button yellow" href="https://chat.whatsapp.com/H75TL5UXRr5LFeJ1r1OAke" target="_blank" rel="noopener">Sumarme a la comunidad</a>
       <img src="assets/ecomarg-logo.png" alt="Ecom Argentina">
     </div>
   </section>
@@ -564,6 +606,120 @@
     <p>Una iniciativa de Ecom Argentina, impulsada por FIXY Logística.</p>
   </div>
 </footer>
+
+
+<!-- Modal de registro a las charlas -->
+<div class="reg-modal" id="reg-modal" hidden>
+  <div class="reg-modal__overlay" data-reg-close></div>
+  <div class="reg-card" role="dialog" aria-modal="true" aria-labelledby="reg-title">
+    <button type="button" class="reg-close" data-reg-close aria-label="Cerrar">✕</button>
+
+    <div id="reg-step-form">
+      <h3 id="reg-title">Anotate a la charla</h3>
+      <p class="reg-card__date" id="reg-date">—</p>
+      <form id="reg-form" novalidate>
+        <label class="reg-field"><span>Nombre y apellido *</span><input type="text" name="nombre" autocomplete="name" required></label>
+        <label class="reg-field"><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
+        <label class="reg-field"><span>WhatsApp</span><input type="tel" name="telefono" autocomplete="tel"></label>
+        <label class="reg-field"><span>Empresa o marca</span><input type="text" name="empresa" autocomplete="organization"></label>
+        <button type="submit" class="button yellow" id="reg-submit">Confirmar mi lugar</button>
+        <p class="reg-legal">Usamos tus datos solo para enviarte el acceso a la charla y novedades de la comunidad.</p>
+      </form>
+    </div>
+
+    <div id="reg-step-done" class="reg-done" hidden>
+      <div class="reg-done__check">✓</div>
+      <h3>¡Registro confirmado!</h3>
+      <p id="reg-done-date">—</p>
+      <p class="reg-done__mail">Te enviamos el link del Meet por mail y te sumamos la charla a tu calendario. Revisá tu casilla (y el correo no deseado, por las dudas).</p>
+      <a class="button yellow" href="https://chat.whatsapp.com/H75TL5UXRr5LFeJ1r1OAke" target="_blank" rel="noopener">Sumarme a la comunidad</a>
+      <p class="reg-legal">Mientras tanto, entrá al grupo privado de WhatsApp para enterarte de todo.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  /* Pegá acá la URL del Apps Script (Implementar > Nueva implementación > Aplicación web) */
+  var REGISTRO_ENDPOINT = 'https://script.google.com/a/macros/fixy.com.ar/s/AKfycbyL3-qZq-E8rPJXGkJv6dhZ13sj-_BjPCNJvaNhgoUnJRo_4i4ummsk0Ht9YZuD3ayK/exec';
+
+  var modal    = document.getElementById('reg-modal');
+  var stepForm = document.getElementById('reg-step-form');
+  var stepDone = document.getElementById('reg-step-done');
+  var form     = document.getElementById('reg-form');
+  var submit   = document.getElementById('reg-submit');
+  var dateEl   = document.getElementById('reg-date');
+  var doneDate = document.getElementById('reg-done-date');
+  var actual   = { charla: '', meet: '' };
+
+  function abrir(charla, meet) {
+    actual = { charla: charla, meet: meet };
+    dateEl.textContent = charla;
+    doneDate.textContent = charla;
+    stepDone.hidden = true;
+    stepForm.hidden = false;
+    submit.disabled = false;
+    submit.textContent = 'Confirmar mi lugar';
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () { form.nombre.focus(); }, 50);
+  }
+
+  function cerrar() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.step-date[data-meet]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      abrir(btn.dataset.charla, btn.dataset.meet);
+    });
+  });
+
+  modal.querySelectorAll('[data-reg-close]').forEach(function (el) {
+    el.addEventListener('click', cerrar);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) cerrar();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.nombre.value.trim() || !form.email.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    submit.disabled = true;
+    submit.textContent = 'Guardando...';
+
+    var datos = {
+      nombre:   form.nombre.value.trim(),
+      email:    form.email.value.trim(),
+      telefono: form.telefono.value.trim(),
+      empresa:  form.empresa.value.trim(),
+      charla:   actual.charla,
+      meet:     actual.meet,
+      origen:   'landing /effix'
+    };
+
+    function listo() {
+      stepForm.hidden = true;
+      stepDone.hidden = false;
+      if (window.fbq) fbq('track', 'Lead', { content_name: actual.charla });
+      if (window.gtag) gtag('event', 'generate_lead', { event_label: actual.charla });
+    }
+
+    if (!REGISTRO_ENDPOINT) { listo(); return; }
+
+    fetch(REGISTRO_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(datos)
+    }).then(listo).catch(listo);
+  });
+})();
+</script>
 
 </body>
 </html>

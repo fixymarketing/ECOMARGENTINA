@@ -127,7 +127,10 @@
 
     /* Grillas */
     .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:42px; }
-    .grid--4 { grid-template-columns:repeat(4,1fr); }
+    .grid--5 { grid-template-columns:repeat(5,1fr); gap:14px; }
+    .grid--5 .card { padding:22px 20px; }
+    .grid--5 .card h3 { font-size:1.12rem; }
+    .grid--5 .card p { font-size:.88rem; }
     .card { padding:26px; background:var(--white); border:1px solid var(--line); border-radius:14px; }
     .dark .card { background:#083f6e; border-color:#1d5c93; }
     .card p { margin:12px 0 0; color:var(--muted); font-size:.95rem; }
@@ -231,7 +234,7 @@
     body > footer p { margin:4px 0; }
 
     @media (max-width:980px) { .effix-grid,.deal { grid-template-columns:1fr; } .deal { border-radius:20px; } }
-    @media (max-width:900px) { .grid,.grid--4,.verticals,.mapa-legend { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:900px) { .grid,.grid--5,.verticals,.mapa-legend { grid-template-columns:repeat(2,1fr); } }
     @media (max-width:760px) {
       nav { display:none; }
       .nav { gap:12px; }
@@ -239,7 +242,7 @@
       .hero { padding:52px 0 60px; }
       .hero::before { width:460px; height:460px; right:-150px; top:-40px; }
       .hero::after { width:180px; height:180px; right:auto; left:-70px; bottom:auto; top:46%; }
-      .hero-grid,.split,.grid,.grid--4,.verticals,.tee-grid,.mapa-legend { grid-template-columns:1fr; }
+      .hero-grid,.split,.grid,.grid--5,.verticals,.tee-grid,.mapa-legend { grid-template-columns:1fr; }
       .hero-art { width:100%; margin:0 auto; }
       section { padding:64px 0; }
       .ecard { padding:18px; border-radius:16px; box-shadow:4px 4px 0 rgba(5,45,80,.12); }
@@ -367,7 +370,7 @@
       <h2>Qué incluye<br><span>el sponsoreo.</span></h2>
       <p class="lead">Cuatro beneficios concretos dentro del stand y del predio, pensados para que una empresa paraguaya tenga visibilidad y agenda durante los tres días.</p>
 
-      <div class="grid grid--4">
+      <div class="grid grid--5">
         <article class="card">
           <span class="num">01</span>
           <h3>Pantalla en la feria</h3>
@@ -389,6 +392,11 @@
           <h3>Remeras cruzadas</h3>
           <p>Remeras de Argentina con la bandera de Paraguay en la manga, y de Paraguay con la de Argentina. Un país vinculado al otro.</p>
         </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>Promotoras en el predio</h3>
+          <p>Los tres días, promotoras recorren la feria repartiendo folletería para llevar visitantes al stand.</p>
+        </article>
       </div>
 
       <div class="deal">
@@ -400,6 +408,7 @@
             <li><b>1 entrada VIP + 4 generales</b> por sponsor.</li>
             <li><b>Espacio de networking</b> en el stand.</li>
             <li><b>Remeras AR/PY cruzadas</b>, con la bandera del otro país en la manga.</li>
+            <li><b>Promotoras los tres días</b> repartiendo folletería en el predio para traer visitantes al stand.</li>
             <li><b>Exclusividad por vertical</b>: un solo proveedor por rubro dentro del stand.</li>
           </ul>
           <div class="deal__box">El stand ya está diseñado y producido, así que no hay costos ni tiempos de armado. Pasajes, alojamiento y traslados corren por cuenta de cada empresa.</div>

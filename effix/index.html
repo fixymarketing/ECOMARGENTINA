@@ -195,6 +195,11 @@
     }
     @media (prefers-reduced-motion:reduce) { .step-date em { animation:none; } }
     button.step-date { width:100%; font-family:inherit; text-align:left; cursor:pointer; }
+    .step-date.is-past { background:#e9edf1; box-shadow:none; opacity:.75; cursor:default; }
+    .step-date.is-past:hover { transform:none; box-shadow:none; }
+    .step-dates .step-date.is-past b,
+    .step-dates .step-date.is-past span { color:#7c8b99; }
+    .step-date.is-past em { background:#b9c4cd; color:#fff; animation:none; }
 
     /* Modal de registro */
     .reg-modal[hidden] { display:none; }
@@ -558,9 +563,9 @@
             <strong>Elegí tu fecha</strong>
             <span>Charla virtual por Google Meet · 1 hora</span>
             <div class="step-dates">
-              <button type="button" class="step-date" data-charla="Lunes 21 de septiembre - 20:00 hs" data-meet="https://meet.google.com/nts-grjb-usd">
+              <button type="button" class="step-date is-past" disabled aria-disabled="true">
                 <span style="margin:0"><b>Lunes 21</b><span>20:00 hs (Argentina)</span></span>
-                <em>Anotarme →</em>
+                <em>Finalizada</em>
               </button>
               <button type="button" class="step-date" data-charla="Miércoles 23 de septiembre - 20:00 hs" data-meet="https://meet.google.com/rbn-idjr-keh">
                 <span style="margin:0"><b>Miércoles 23</b><span>20:00 hs (Argentina)</span></span>

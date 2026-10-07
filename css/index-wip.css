@@ -709,6 +709,10 @@
 .footer__links { flex-direction: row; flex-wrap: wrap; justify-content: flex-end; gap: 10px 18px; }
 .footer__links a { color: rgba(0,0,0,.68); font-size: 13px; text-decoration: none; }
 .footer__links a:hover { color: var(--c-black); }
+.footer__contact-col { flex-direction: column; align-items: flex-end; gap: 16px; }
+.footer__mail { display: inline-flex; align-items: center; gap: 8px; color: rgba(0,0,0,.68); font-size: 13px; font-weight: 600; text-decoration: none; transition: color var(--trans); }
+.footer__mail:hover { color: var(--c-black); }
+.footer__mail svg { flex-shrink: 0; }
 
 @media (max-width: 900px) {
   .ecosystem__grid { grid-template-columns: repeat(2, 1fr); }
@@ -831,3 +835,94 @@
 
 /* ── Contador flotante: naranja ECOM y texto blanco ── */
 .cd-float__label { color: #fff; }
+
+
+/* ── EFFIX: empresas del ecosistema (reemplaza las tarjetas de video) ── */
+/* El video y el fondo de la seccion conservan la altura que tenian con las tarjetas de video,
+   asi no se estiran al sumar las 6 tarjetas */
+.latam-mission .otras__media { bottom: auto; height: 1078px; }
+.eco-companies { padding: 8px 0 96px; font-family: var(--font); }
+.eco-companies__head { max-width: 720px; margin: 0 auto 40px; text-align: center; }
+.eco-companies__title { margin: 0; color: #fff; font-size: clamp(30px, 3.4vw, 44px); font-weight: 700; line-height: 1.05; letter-spacing: var(--ls-base); }
+.eco-companies__subtitle { margin: 14px 0 0; color: rgba(255,255,255,.78); font-size: 17px; line-height: 1.45; }
+
+.eco-companies__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.eco-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px 22px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(87,151,212,.28);
+  background: linear-gradient(180deg, rgba(87,151,212,.16) 0%, rgba(87,151,212,.05) 100%), #071a52;
+  transition: transform .3s cubic-bezier(0.16,1,0.3,1), border-color .3s ease, background-color .3s ease, box-shadow .3s ease;
+}
+.eco-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(127,179,230,.6);
+  box-shadow: 0 14px 30px rgba(0,0,0,.22);
+}
+
+.eco-card__head { margin-bottom: 22px; }
+.eco-card__logo {
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 28px;
+  border-radius: 16px;
+  background: #fff;
+}
+.eco-card__logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.eco-card__logo--pending {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  color: rgba(255,255,255,.32);
+}
+
+.eco-card__vertical { margin: 0; color: #7fb3e6; font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.eco-card__name { margin: 6px 0 0; color: #fff; font-size: 21px; font-weight: 700; line-height: 1.15; }
+.eco-card__desc { margin: 10px 0 0; color: rgba(255,255,255,.8); font-size: 15px; line-height: 1.45; }
+
+.eco-card__cta {
+  margin-top: auto;
+  padding-top: 22px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #7fb3e6;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease, gap .2s ease;
+}
+a.eco-card__cta:hover { color: #fff; gap: 10px; }
+a.eco-card__cta:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 4px; }
+.eco-card__cta--disabled { color: rgba(255,255,255,.38); cursor: default; }
+
+@media (max-width: 1024px) {
+  .latam-mission .otras__media { height: 1232px; }
+  .latam-mission::after { bottom: auto; height: 1232px; }
+  .eco-companies { padding: 56px 20px 72px; }
+  .eco-companies__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 640px) {
+  .eco-companies { padding: 8px 16px 56px; }
+  .eco-companies__head { margin-bottom: 28px; }
+  .eco-companies__subtitle { font-size: 15px; }
+  .eco-companies__grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .eco-card { padding: 20px 20px 22px; }
+  .eco-card__logo { height: 104px; }
+  .eco-card__cta { padding-block: 18px 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eco-card, .eco-card__cta { transition: none; }
+  .eco-card:hover { transform: none; }
+}

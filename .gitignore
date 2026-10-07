@@ -19,6 +19,7 @@ node_modules/
 
 # Fuentes de video sin comprimir (se versiona solo la version -web)
 media/negocios-effix.mp4
+media/negocios1.mp4
 
 # Fuentes pesadas del roadmap (se versiona solo la version .webp)
 images/roadmap/*.png

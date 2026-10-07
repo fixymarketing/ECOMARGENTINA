@@ -406,8 +406,8 @@
 
   <!-- GIF de fondo (igual que hero__media) -->
   <div class="otras__media" aria-hidden="true">
-    <video id="effix-video" class="otras__gif" muted="" playsinline="" preload="none" data-lazy poster="images/poster-negocios-effix.webp" loop="">
-      <source data-src="media/negocios-effix-web.mp4" type="video/mp4">
+    <video id="effix-video" class="otras__gif" muted="" playsinline="" preload="none" data-lazy poster="images/poster-negocios1.webp" loop="">
+      <source data-src="media/negocios1-web.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -431,59 +431,87 @@
     </div>
   </div>
 
-  <!-- Video cards -->
+  <!-- Empresas del ecosistema ECOM Argentina (orden fijo: Fixy, Siliqua, Merco, FINEX, MERX, Estudio).
+       Pendientes, marcados con data-pending:
+       - Merco Digital: falta el logo. Cuando esté, reemplazar el bloque .eco-card__logo--pending por
+         <div class="eco-card__logo"><img src="images/ecosistema/merco.webp" alt="Merco Digital" loading="lazy"></div>
+       - MERX / Rocket Group: falta el sitio. Reemplazar el <span class="eco-card__cta eco-card__cta--disabled"> por
+         <a class="eco-card__cta" href="URL" target="_blank" rel="noopener noreferrer">Conocer MERX <span aria-hidden="true">→</span></a>
+       - Estudio contable y societario: faltan nombre comercial (.eco-card__name), logo y sitio (mismo reemplazo que arriba). -->
   <div class="container">
-    <div class="otras__cards">
+    <div class="eco-companies">
+      <div class="eco-companies__head">
+        <h2 class="eco-companies__title">Un especialista para cada parte de tu operación</h2>
+        <p class="eco-companies__subtitle">Empresas que conocen el mercado argentino y pueden acompañarte en cada etapa de tu desembarco.</p>
+      </div>
+      <div class="eco-companies__grid">
 
-      <article class="video-card" data-yt-id="">  <!-- TODO: ID del video del sponsor -->
-        <div class="video-card__thumb">
-          <img src="images/placeholders/ph-video-01.svg" alt="Presencia argentina en LATAM">
-          <div class="video-card__play" aria-label="Ver presencia argentina"></div>
+      <article class="eco-card">
+        <div class="eco-card__head">
+          <div class="eco-card__logo"><img src="images/ecosistema/fixy.webp" alt="Fixy Logística" loading="lazy"></div>
         </div>
-        <div class="video-card__info">
-          <p class="video-card__label">Presencia argentina</p>
-        </div>
+        <p class="eco-card__vertical">Logística &amp; Fulfillment</p>
+        <h3 class="eco-card__name">Fixy</h3>
+        <p class="eco-card__desc">Operación logística para vender en Argentina: almacenamiento, preparación de pedidos, entregas y devoluciones.</p>
+        <a class="eco-card__cta" href="https://fixy.com.ar/" target="_blank" rel="noopener noreferrer">Conocer Fixy <span aria-hidden="true">→</span></a>
       </article>
 
-      <article class="video-card" data-yt-id="">  <!-- TODO: ID del video del sponsor -->
-        <div class="video-card__thumb">
-          <img src="images/placeholders/ph-video-02.svg" alt="Ecosistema argentino en movimiento">
-          <div class="video-card__play" aria-label="Ver ecosistema en movimiento"></div>
+      <article class="eco-card">
+        <div class="eco-card__head">
+          <div class="eco-card__logo"><img src="images/ecosistema/siliqua.webp" alt="Siliqua" loading="lazy"></div>
         </div>
-        <div class="video-card__info">
-          <p class="video-card__label">Ecosistema en movimiento</p>
-        </div>
+        <p class="eco-card__vertical">Pagos internacionales</p>
+        <h3 class="eco-card__name">Siliqua</h3>
+        <p class="eco-card__desc">Soluciones para gestionar pagos, cobranzas y movimientos internacionales al operar entre Argentina y otros mercados.</p>
+        <a class="eco-card__cta" href="https://siliquapay.com/" target="_blank" rel="noopener noreferrer">Conocer Siliqua <span aria-hidden="true">→</span></a>
       </article>
 
-      <article class="video-card" data-yt-id="">  <!-- TODO: ID del video del sponsor -->
-        <div class="video-card__thumb">
-          <img src="images/placeholders/ph-video-03.svg" alt="Encuentros regionales de e-commerce">
-          <div class="video-card__play" aria-label="Ver encuentros regionales"></div>
+      <article class="eco-card" data-pending="logo">
+        <div class="eco-card__head">
+          <div class="eco-card__logo eco-card__logo--pending" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"></path><path d="M3 12.5h18"></path></svg>
+          </div>
         </div>
-        <div class="video-card__info">
-          <p class="video-card__label">Encuentros regionales</p>
-        </div>
+        <p class="eco-card__vertical">Marketing &amp; Ventas</p>
+        <h3 class="eco-card__name">Merco Digital</h3>
+        <p class="eco-card__desc">Estrategia, adquisición y procesos comerciales para lanzar una marca, generar demanda y vender en el mercado argentino.</p>
+        <a class="eco-card__cta" href="https://mercodigital.com.ar/" target="_blank" rel="noopener noreferrer">Conocer Merco <span aria-hidden="true">→</span></a>
       </article>
 
-      <article class="video-card" data-yt-id="">  <!-- TODO: ID del video del sponsor -->
-        <div class="video-card__thumb">
-          <img src="images/placeholders/ph-video-04.svg" alt="Misión ECOM ARGENTINA en Medellín">
-          <div class="video-card__play" aria-label="Ver la misión en Medellín"></div>
+      <article class="eco-card">
+        <div class="eco-card__head">
+          <div class="eco-card__logo"><img src="images/ecosistema/finex.webp" alt="FINEX Global Trade" loading="lazy"></div>
         </div>
-        <div class="video-card__info">
-          <p class="video-card__label">La misión en Medellín</p>
-        </div>
+        <p class="eco-card__vertical">Comercio Exterior</p>
+        <h3 class="eco-card__name">FINEX</h3>
+        <p class="eco-card__desc">Acompañamiento para importar y operar productos en Argentina, desde la coordinación internacional hasta su ingreso al mercado.</p>
+        <a class="eco-card__cta" href="https://finex.ar/" target="_blank" rel="noopener noreferrer">Conocer FINEX <span aria-hidden="true">→</span></a>
       </article>
 
+      <article class="eco-card" data-pending="url">
+        <div class="eco-card__head">
+          <div class="eco-card__logo"><img src="images/ecosistema/merx.webp" alt="MERX" loading="lazy"></div>
+        </div>
+        <p class="eco-card__vertical">Producto &amp; Fabricación</p>
+        <h3 class="eco-card__name">MERX / Rocket Group</h3>
+        <p class="eco-card__desc">Desarrollo y fabricación de suplementos, marca propia y abastecimiento de productos para operar en Argentina y la región.</p>
+        <span class="eco-card__cta eco-card__cta--disabled" aria-disabled="true">Sitio próximamente</span>
+      </article>
+
+      <article class="eco-card" data-pending="nombre logo url">
+        <div class="eco-card__head">
+          <div class="eco-card__logo eco-card__logo--pending" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"></path><path d="M3 12.5h18"></path></svg>
+          </div>
+        </div>
+        <p class="eco-card__vertical">Estructura societaria &amp; fiscal</p>
+        <h3 class="eco-card__name">Estudio contable y societario</h3>
+        <p class="eco-card__desc">Acompañamiento para constituir y estructurar una empresa en Argentina, entendiendo sus obligaciones societarias e impositivas.</p>
+        <span class="eco-card__cta eco-card__cta--disabled" aria-disabled="true">Información próximamente</span>
+      </article>
+
+      </div>
     </div>
-
-    <div class="otras__dots" role="group" aria-label="Navegar videos">
-      <button class="otras__dot is-active" aria-label="Video 1"></button>
-      <button class="otras__dot" aria-label="Video 2"></button>
-      <button class="otras__dot" aria-label="Video 3"></button>
-      <button class="otras__dot" aria-label="Video 4"></button>
-    </div>
-
   </div>
 
 </section>
@@ -515,16 +543,19 @@
         <a href="index.html" class="footer__brand" aria-label="ECOM ARGENTINA — inicio"><img src="images/icon-footer-web.webp" alt="ECOM ARGENTINA" width="900" height="146"></a>
       </div>
 
-      <nav class="footer__right footer__links" aria-label="Navegación del pie de página">
-        <a href="#como-entrar">Cómo entrar</a>
-        <a href="#por-que-argentina">Por qué Argentina</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#ecosistema">Ecosistema</a>
-        <a href="#effix">EFFIX 2026</a>
-        <a href="#faq">FAQ</a>
-        <a href="pages/mapa.html">Mapa</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <div class="footer__right footer__contact-col">
+        <nav class="footer__right footer__links" aria-label="Navegación del pie de página">
+          <a href="#como-entrar">Cómo entrar</a>
+          <a href="#por-que-argentina">Por qué Argentina</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#ecosistema">Ecosistema</a>
+          <a href="#effix">EFFIX 2026</a>
+          <a href="#faq">FAQ</a>
+          <a href="pages/mapa.html">Mapa</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a href="mailto:negocios@ecomargentina.com" class="footer__mail"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6.5 8.5-6.5"></path></svg><span>negocios@ecomargentina.com</span></a>
+      </div>
 
     </div>
   </div>

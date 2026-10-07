@@ -24,6 +24,14 @@ html { scroll-behavior: smooth; }
   --c-black:   #000000;
   --c-grey:    #666666;
   --c-text:    #2b2930;
+  /* Fondo azul oscuro unificado de las secciones (valor exacto del ROADMAP) */
+  --c-bg-navy: #051548;
+  /* CTAs principales: celeste de marca (navbar) y azul oscuro institucional (hero) */
+  --c-celeste:       #5797d4;
+  --c-cta-light-bg:  var(--c-celeste);
+  --c-cta-light-txt: #051548;
+  --c-cta-dark-bg:   #051548;
+  --c-cta-dark-txt:  #ffffff;
 
   /* Typography */
   --font:      'proxima-nova', 'Helvetica Neue', Arial, sans-serif;
@@ -157,7 +165,8 @@ body {
   border: 1px solid transparent;
 }
 .header__actions .btn--blue {
-  background: var(--c-blue);
+  background: var(--c-cta-light-bg);
+  color: var(--c-cta-light-txt);
   border-color: transparent;
 }
 
@@ -574,9 +583,11 @@ body {
   padding-inline: 19px;
   border-radius: 7px;
   border: 1px solid transparent;
-  background: var(--c-blue);
-  color: var(--c-white);
+  background: var(--c-cta-dark-bg);
+  color: var(--c-cta-dark-txt);
 }
+/* sobre azul oscuro, oscurecer no se nota: el hover aclara levemente */
+.hero__cta .btn:hover { filter: brightness(1.45); }
 
 /* =============================================
    ARGENTINA MARKET SECTION
@@ -763,7 +774,7 @@ body {
    SECTION VIDEO / OTRAS EDICIONES
    ============================================= */
 .section-otras {
-  background-color: #051548;
+  background-color: var(--c-bg-navy);
   position: relative;
   overflow: hidden;
 }

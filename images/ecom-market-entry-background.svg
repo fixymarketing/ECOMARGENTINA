@@ -14,7 +14,7 @@
       .cls-5 { clip-path: url(#entry-clip); }
     </style>
     <linearGradient id="entry-navy" x1="1357.9" y1="1067.54" x2="-363.23" y2="-171.84" gradientTransform="translate(0 1964) scale(1 -1)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#08162f"/>
+      <stop offset="0" stop-color="#051548"/>
       <stop offset="1" stop-color="#051548"/>
     </linearGradient>
     <clipPath id="entry-clip">

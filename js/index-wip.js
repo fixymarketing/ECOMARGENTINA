@@ -10,15 +10,16 @@
     var start = performance.now();
     var prefix = el.dataset.prefix || '';
     var suffix = el.dataset.suffix || '';
+    var decimals = parseInt(el.dataset.decimals || '0', 10); // ej. 25,1 M
+    function format(n) { return n.toFixed(decimals).replace('.', ','); }
     function tick(now) {
       var t = Math.min(1, (now - start) / duration);
       var eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
-      var val = Math.round(target * eased);
-      el.textContent = prefix + val + suffix;
+      el.textContent = prefix + format(target * eased) + suffix;
       if (t < 1) requestAnimationFrame(tick);
     }
     // Estado inicial en 0
-    el.textContent = prefix + '0' + suffix;
+    el.textContent = prefix + format(0) + suffix;
     requestAnimationFrame(tick);
   }
 
@@ -27,7 +28,7 @@
     if (fired) return;
     fired = true;
     nums.forEach(function (el) {
-      animate(el, parseInt(el.dataset.count, 10), 1600);
+      animate(el, parseFloat(el.dataset.count), 1600);
     });
   }
 
@@ -135,4 +136,22 @@
     if (event.key === 'ArrowLeft') showPrevious();
     if (event.key === 'ArrowRight') showNext();
   });
+})();
+
+// Home — Roadmap "Así se abre Argentina": la línea se recorre y revela las etapas al entrar en pantalla
+(function () {
+  var roadmap = document.querySelector('.roadmap');
+  if (!roadmap) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return; // sin animación: todo visible
+  roadmap.classList.add('roadmap--anim');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        roadmap.classList.add('is-in');
+        io.disconnect();
+      }
+    });
+  }, { threshold: 0.25 });
+  io.observe(roadmap);
 })();

@@ -2065,7 +2065,7 @@ body {
 .cd-float__bottom { display: contents; }
 
 /* =============================================
-   BENEFICIO EFFIX 2026
+   POP-UP DE INGRESO — COMUNIDAD ECOM ARGENTINA
    ============================================= */
 .effix-benefit-modal {
   position: fixed;
@@ -2133,56 +2133,36 @@ body.effix-benefit-open { overflow: hidden; }
   text-align: center;
 }
 
-.effix-benefit-card__eyebrow,
-.effix-benefit-card__off,
-.effix-benefit-card__ticket,
+.effix-benefit-card__title,
 .effix-benefit-card__description { font-family: var(--font); }
 
-.effix-benefit-card__eyebrow {
-  font-size: 12.5px;
+.effix-benefit-card__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   font-weight: 800;
-  letter-spacing: 0.11em;
-  line-height: 1;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
-.effix-benefit-card__discount {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 4px 0 -4px;
-  font-family: var(--font);
-  font-size: 74px;
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 0.92;
+.effix-benefit-card__title-main {
+  font-size: 22px;
+  font-weight: 900;
+  color: #051548;
+}
+
+.effix-benefit-card__title-accent {
+  font-size: 30px;
+  letter-spacing: -0.02em;
   color: #5797d4;
   text-shadow: 0 3px 0 rgba(255, 255, 255, 0.35);
 }
 
-.effix-benefit-card__percent {
-  margin-top: 8px;
-  font-size: 0.52em;
-  letter-spacing: -0.04em;
-}
-
-.effix-benefit-card__off {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  line-height: 1;
-}
-
-.effix-benefit-card__ticket {
-  margin-top: 6px;
-  font-size: 13.5px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  line-height: 1.05;
-}
-
 .effix-benefit-card__description {
-  max-width: 208px;
-  margin-top: 8px;
+  max-width: 230px;
+  margin-top: 14px;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
@@ -2230,7 +2210,15 @@ body.effix-benefit-open { overflow: hidden; }
   .effix-benefit-modal { padding: 16px; }
   .effix-benefit-card { width: min(330px, calc(100vw - 24px)); }
   .effix-benefit-card__top { padding-inline: 44px; }
-  .effix-benefit-card__discount { font-size: 68px; }
+  .effix-benefit-card__title-main { font-size: 20px; }
+  .effix-benefit-card__title-accent { font-size: 27px; }
+}
+
+@media (max-width: 360px) {
+  .effix-benefit-card__top { padding-inline: 30px; }
+  .effix-benefit-card__title-main { font-size: 18px; }
+  .effix-benefit-card__title-accent { font-size: 24px; }
+  .effix-community-cta { font-size: 13.5px; padding-inline: 14px; }
 }
 
 @media (max-height: 560px) {

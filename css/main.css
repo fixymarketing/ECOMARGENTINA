@@ -28,8 +28,8 @@ html { scroll-behavior: smooth; }
   --c-bg-navy: #051548;
   /* CTAs principales: celeste de marca (navbar) y azul oscuro institucional (hero) */
   --c-celeste:       #5797d4;
-  --c-cta-light-bg:  var(--c-celeste);
-  --c-cta-light-txt: #051548;
+  --c-cta-light-bg:  linear-gradient(135deg, #0a7be4, #44b8ff); /* mismo celeste brillante del CTA del contador EFFIX */
+  --c-cta-light-txt: #ffffff;
   --c-cta-dark-bg:   #051548;
   --c-cta-dark-txt:  #ffffff;
 

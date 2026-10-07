@@ -1492,3 +1492,80 @@ a.eco-card__cta:focus-visible { outline: 2px solid #fff; outline-offset: 4px; bo
 @media (max-width: 400px) {
   .latam-mission .latam-mission__text { margin-top: 12px; }
 }
+
+
+/* ================================================================
+   BANDERA — "Un país. Un mercado. Un ecosistema."
+   Texto centrado sobre el video (mismo video, encuadre y curvas)
+   ================================================================ */
+/* Velo sutil, un poco más denso en el centro para que el texto se lea sobre el blanco de la bandera */
+.market-visual::after {
+  background:
+    radial-gradient(ellipse 46% 52% at 50% 50%, rgba(5,21,72,.5) 0%, rgba(5,21,72,.22) 100%),
+    rgba(5,21,72,.16);
+}
+.market-visual-card { max-width: 980px; }
+.market-visual-card__text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
+  padding-inline: 24px;
+  text-align: center;
+}
+.market-visual-card__eyebrow {
+  margin: 0 0 16px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-shadow: 0 1px 10px rgba(5,21,72,.6);
+}
+.market-visual-card__name {
+  margin: 0;
+  font-size: clamp(36px, 4.6vw, 68px);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  text-shadow: 0 2px 22px rgba(5,21,72,.55);
+}
+.market-visual-card__accent {
+  display: block;
+  color: var(--c-celeste);
+  text-shadow: 0 2px 18px rgba(5,21,72,.85), 0 0 2px rgba(5,21,72,.5);
+}
+.market-visual-card__role {
+  margin: 18px auto 0;
+  max-width: 520px;
+  color: #fff;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: balance;
+  text-shadow: 0 1px 12px rgba(5,21,72,.7);
+}
+
+@media (max-width: 768px) {
+  .market-visual-card { height: 400px; }
+  /* El Sol de Mayo queda a la izquierda del video: se corre el encuadre para que se vea */
+  .market-visual__video { object-position: 24% center; }
+  /* Texto en el tercio inferior: deja ver la bandera y el sol arriba */
+  .market-visual-card__text {
+    left: 50%;
+    top: auto;
+    bottom: 28px;
+    transform: translateX(-50%);
+    max-width: 100%;
+    padding-inline: 8px;
+  }
+  .market-visual-card__eyebrow { margin-bottom: 10px; font-size: 11px; letter-spacing: .16em; }
+  .market-visual-card__name { font-size: clamp(26px, 8vw, 34px); }
+  .market-visual-card__role { margin-top: 12px; font-size: 15px; max-width: 300px; }
+  .market-visual::after {
+    background: linear-gradient(180deg, rgba(5,21,72,.12) 0%, rgba(5,21,72,.2) 40%, rgba(5,21,72,.62) 100%);
+  }
+}
